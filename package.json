@@ -1,0 +1,49 @@
+{
+  "name": "cswl.lu",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "dompurify": "^2.2.6",
+    "leaflet": "^1.7.1",
+    "moment": "^2.29.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.3.1",
+    "react-notifications": "^1.6.0",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^3.2.0",
+    "reactjs-popup": "^2.0.4"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext .js --ext .jsx",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx src"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "react-scripts": "^5.0.0",
+    "source-map-explorer": "^2.5.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "overrides": {
+    "eslint": "^8.0.0",
+    "nth-check": "2.0.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.3.1"
+  }
+}

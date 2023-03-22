@@ -1,0 +1,6 @@
+{
+  "short_name": "CSWL 2023",
+  "name": "CYBERSECURITY Week Luxembourg 2023",
+  "start_url": "./index.html",
+  "display": "standalone"
+}

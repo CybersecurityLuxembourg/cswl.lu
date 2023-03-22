@@ -1,0 +1,67 @@
+
+#Footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  line-height: 1.2;
+  z-index: 150;
+  padding: 10px 0px 0px 0px;
+}
+
+#Footer .Footer-logo {
+  width: 100%;
+}
+
+#Footer .Footer-logo-cyberlux {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#Footer .Footer-content .row > div {
+  margin-bottom: 25px;
+}
+
+#Footer a {
+  color: white;
+}
+
+#Footer a:hover {
+  color: var(--secondary-color);
+}
+
+#Footer .Footer-title {
+    color: white;
+    font-size: 18px;
+    font-family: var(--title-font);
+}
+
+#Footer .Footer-content {
+  margin: 0px auto 0px auto;
+  padding: 25px 40px 15px 40px;
+  max-width: 1240px;
+}
+
+#Footer .Footer-network {
+  width: 100%;
+  font-size: 25px;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: var(--primary-color);
+  width: fit-content;
+}
+
+#Footer .Footer-network a i:hover {
+  color: var(--secondary-color) !important;
+}
+
+#Footer .Footer-documentation-and-terms a {
+  margin: 5px 8px;
+  display: block;
+}
+
+#Footer .Footer-link {
+  padding: 5px 0px;
+}
