@@ -18,19 +18,7 @@ class InsideApp extends React.Component {
 		this.state = {
 			lhc: null,
 			analytics: null,
-			unlisten: null,
 		};
-	}
-
-	componentWillMount() {
-		this.setState({
-			unlisten: this.props.history.listen((location) => {
-				// eslint-disable-next-line no-multi-assign,no-underscore-dangle
-				const paq = window._paq = window._paq || [];
-				paq.push(["setCustomUrl", location.pathname + location.search]);
-				paq.push(["trackPageView"]);
-			}),
-		});
 	}
 
 	componentDidMount() {
@@ -38,30 +26,11 @@ class InsideApp extends React.Component {
 		this.getLHC();
 	}
 
-	componentWillUnmount() {
-		this.state.unlisten();
-	}
-
 	getLHC() {
 		getRequest.call(this, "public/get_public_entities?name=(LHC)", (data) => {
 			if (data.length === 1) {
 				this.setState({
 					lhc: data[0],
-				}, () => {
-					const params = {
-						entities: this.state.lhc.id,
-						type: "SERVICE",
-					};
-
-					getRequest.call(this, "public/get_public_articles?" + dictToURI(params), (data2) => {
-						this.setState({
-							services: data2.items,
-						});
-					}, (response) => {
-						nm.warning(response.statusText);
-					}, (error) => {
-						nm.error(error.message);
-					});
 				});
 			} else if (data.length === 0) {
 				nm.error("LHC data not found. Please contact administrators."); 

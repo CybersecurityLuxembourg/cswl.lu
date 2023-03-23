@@ -8,16 +8,41 @@ export default class PageHome extends React.Component {
 		super(props);
 
 		this.state = {
+			events: null,
 		};
 	}
 
 	componentDidMount() {
-		window.addEventListener("hashchange", () => {
-			this.scrollToElement();
-		});
-
-		this.scrollToElement()
+		this.getEvents();
 	}
+
+	componentDidUpdate(prevProps) {
+		if (prevProps.lhc !== this.props.lhc) {
+			this.getEvents();
+		}
+	}
+
+	getEvents(page) {
+		if (this.props.lhc) {
+			const params = {
+				entities: this.props.lhc.id,
+				type: "EVENT",
+				page: page || 1
+			};
+
+			getRequest.call(this, "public/get_public_articles?" + dictToURI(params), (data2) => {
+				this.setState({
+					events: data2.items,
+				});
+			}, (response) => {
+				nm.warning(response.statusText);
+			}, (error) => {
+				nm.error(error.message);
+			});
+		}
+	}
+
+	
 
 	scrollToElement() {
 		const div = document.getElementById(location.hash && location.hash.replaceAll("#", ""));
