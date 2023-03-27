@@ -1,7 +1,10 @@
 import React from "react";
 import "./PageHome.css";
 import { Link } from "react-router-dom";
-
+import Loading from "../box/Loading.jsx";
+import { getRequest } from "../../utils/request.jsx";
+import { dictToURI } from "../../utils/url.jsx";
+import Event from "../item/Event.jsx";
 
 export default class PageHome extends React.Component {
 	constructor(props) {
@@ -30,9 +33,9 @@ export default class PageHome extends React.Component {
 				page: page || 1
 			};
 
-			getRequest.call(this, "public/get_public_articles?" + dictToURI(params), (data2) => {
+			getRequest.call(this, "public/get_public_articles?" + dictToURI(params), (data) => {
 				this.setState({
-					events: data2.items,
+					events: data,
 				});
 			}, (response) => {
 				nm.warning(response.statusText);
@@ -58,8 +61,38 @@ export default class PageHome extends React.Component {
 
 	render() {
 		return (
-			<div id={"PageHome"}>
-				fezfref
+			<div id={"PageHome"} id={"main"}>
+				<img
+					src={"/img/CSWL23_SPRING_nodate_CSWL 16-9.jpg"}
+					alt="LHC office"
+				/>
+
+				<p>
+					The CYBERSECURITY Week Luxembourg - Spring Edition 2023 will frame the events
+					that will be organised by CYBERSECURITY Luxembourg ecosystem members pursuing
+					the objective of widening and increasing cybersecurity awareness. A series of
+					events will be organised throughout the month of June, addressing different
+					types of topics, targeting a wide range of audiences. Because joint efforts
+					have greater resonance, the CSWL aims at bringing together and federating
+					the cybersecurity community, in one hand, and promoting the hard work put
+					together by this same community following a common objective of achieving
+					cyber resilience, in the other hand.
+				</p>
+
+				<h2>Agenda</h2>
+
+				<section className="posts">
+					{this.state.events
+						? this.state.events.items.map((e) => (
+							<Event
+								info={e}
+							/>
+						))
+						: <Loading
+							height={400}
+						/>
+					}
+				</section>
 			</div>
 		);
 	}

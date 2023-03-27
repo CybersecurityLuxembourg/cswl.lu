@@ -8,6 +8,7 @@ import { getRequest } from "../utils/request.jsx";
 import Menu from "./bar/Menu.jsx";
 import Footer from "./bar/Footer.jsx";
 import PageHome from "./page/PageHome.jsx";
+import PageFall from "./page/PageFall.jsx";
 import Page404 from "./page/Page404.jsx";
 import { dictToURI } from "../utils/url.jsx";
 
@@ -62,8 +63,8 @@ class InsideApp extends React.Component {
 				<div id="intro">
 				    <h1>CYBERSECURITY Week<br/>Luxembourg</h1>
 				    <p>Catchy phrase</p>
-				    <ul class="actions">
-				        <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+				    <ul className="actions">
+				        <li><a href="#header" className="button icon solo fa-arrow-down scrolly">Continue</a></li>
 				    </ul>
 				</div>
 
@@ -73,12 +74,21 @@ class InsideApp extends React.Component {
 					{...props}
 				/>}/>
 
-				<div id="main">
+				<div>
 					<Switch>
 						<Route
 							exact
 							path="/"
 							render={(props) => <PageHome
+								lhc={this.state.lhc}
+								analytics={this.state.analytics}
+								{...props}
+							/>}
+						/>
+						<Route
+							exact
+							path="/fall"
+							render={(props) => <PageFall
 								lhc={this.state.lhc}
 								analytics={this.state.analytics}
 								{...props}
