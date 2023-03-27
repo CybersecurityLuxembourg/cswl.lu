@@ -1,16 +1,17 @@
 
-#Page404 {
+.Page404 {
+	background-color: #ffffff;
 	text-align: center;
 	padding: 150px 0px 150px 0px;
 	font-size: 40px;
 	font-weight: bold;
 }
 
-#Page404 i {
+.Page404 i {
 	font-size: 140px;
 	padding:  20px 0px;
 }
 
-#Page404 a {
+.Page404 a {
 	font-size: 20px;
 }

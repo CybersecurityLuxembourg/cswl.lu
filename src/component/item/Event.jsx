@@ -24,7 +24,11 @@ export default class Event extends Component {
 				</span>
 
 				<h2>
-					<a href="http://localhost:1313/post/comments-example/">
+					<a
+						href={this.props.info.link}
+						target="_blank"
+						rel="noreferrer"
+					>
 						{this.props.info.title}
 					</a>
 				</h2>
@@ -32,6 +36,8 @@ export default class Event extends Component {
 			
 			<a
 				href={this.props.info.link}
+				target="_blank"
+				rel="noreferrer"
 				className="image fit"
 			>
 				<img src={getApiURL() + "public/get_public_image/" + this.props.info.image}/>
@@ -48,6 +54,8 @@ export default class Event extends Component {
 				<li>
 					<a
 						href={this.props.info.link}
+						target="_blank"
+						rel="noreferrer"
 						className="button"
 					>
 						Know more

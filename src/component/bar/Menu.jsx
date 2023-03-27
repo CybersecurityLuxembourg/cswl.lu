@@ -24,12 +24,12 @@ export default class Menu extends React.Component {
 				<ul className="links">
 					<Nav.Link>
 						<Link to="/">
-							<li className="active"><a>Spring Edition</a></li>
+							<li className={window.location.pathname === "/" && "active"}><a>Spring Edition</a></li>
 						</Link>
 					</Nav.Link>
 					<Nav.Link>
 						<Link to="/fall">
-							<li><a>Fall Edition</a></li>
+							<li className={window.location.pathname === "/fall" && "active"}><a>Fall Edition</a></li>
 						</Link>
 					</Nav.Link>
 				</ul>
