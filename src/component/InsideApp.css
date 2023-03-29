@@ -41,8 +41,8 @@
 
 #intro input[type="submit"], #intro input[type="reset"], #intro input[type="button"], #intro button, #intro .button {
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px #ffffff;
-    color: #ffffff !important;
+    box-shadow: inset 0 0 0 2px #232021;
+    color: #232021 !important;
 }
 
 #intro a {
@@ -57,4 +57,17 @@
     width: calc(100% - 4rem);
     max-width: 72rem;
     z-index: 2;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#bg {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 100% !important;
+    height: 100vh !important;
+    animation: fadeIn 1s;
 }

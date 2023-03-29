@@ -8,7 +8,8 @@ import { getRequest } from "../utils/request.jsx";
 import Menu from "./bar/Menu.jsx";
 import Footer from "./bar/Footer.jsx";
 import PageHome from "./page/PageHome.jsx";
-import PageFall from "./page/PageFall.jsx";
+import PageAutumn from "./page/PageAutumn.jsx";
+import PageSpring from "./page/PageSpring.jsx";
 import Page404 from "./page/Page404.jsx";
 import { dictToURI } from "../utils/url.jsx";
 
@@ -23,8 +24,35 @@ class InsideApp extends React.Component {
 	}
 
 	componentDidMount() {
+		this.changeBackgroud();
 		this.getAnalytics();
 		this.getLHC();
+
+		addEventListener("scroll", (event) => {
+			console.log(window.innerHeight, document.documentElement.scrollTop);
+			document.getElementById("bg").style.opacity = 1 - (document.documentElement.scrollTop / window.innerHeight * 2);
+		});
+	}
+
+	componentWillMount() {
+		this.unlisten = this.props.history.listen((location, action) => {
+			this.changeBackgroud();
+		});
+	}
+
+	changeBackgroud() {
+		console.log(location);
+		if (location.pathname === "/spring") {
+			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_spring.jpg')";
+		} else if (location.pathname === "/autumn") {
+			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_autumn.jpg')";
+		} else {
+			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_spring.jpg')";
+		}
+	}
+
+	componentWillUnmount() {
+		this.unlisten();
 	}
 
 	getLHC() {
@@ -61,10 +89,8 @@ class InsideApp extends React.Component {
 		return (
 			<div id="wrapper" className="fade-in">
 				<div id="intro">
-				    <h1>CYBERSECURITY Week<br/>Luxembourg</h1>
-				    <p>Catchy phrase</p>
 				    <ul className="actions">
-				        <li><a href="#header" className="button icon solo fa-arrow-down scrolly">Continue</a></li>
+				        <li><a href="#main" className="button icon solo fa-arrow-down scrolly">Continue</a></li>
 				    </ul>
 				</div>
 
@@ -87,8 +113,17 @@ class InsideApp extends React.Component {
 						/>
 						<Route
 							exact
-							path="/fall"
-							render={(props) => <PageFall
+							path="/spring"
+							render={(props) => <PageSpring
+								lhc={this.state.lhc}
+								analytics={this.state.analytics}
+								{...props}
+							/>}
+						/>
+						<Route
+							exact
+							path="/autumn"
+							render={(props) => <PageAutumn
 								lhc={this.state.lhc}
 								analytics={this.state.analytics}
 								{...props}
@@ -105,7 +140,7 @@ class InsideApp extends React.Component {
 					</Switch>
 				</div>
 
-				<div className="bg fixed" style={{ transform: "none" }}/>
+				<div id="bg" className="bg fixed" style={{ transform: "none" }}/>
 				{/* <Footer/> */}
 			</div>
 		);

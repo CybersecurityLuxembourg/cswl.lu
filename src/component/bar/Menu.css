@@ -9,7 +9,7 @@
     -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
     -ms-transition: -ms-transform 1s ease, opacity 1s ease;
     transition: transform 1s ease, opacity 1s ease;
-    background: rgba(255, 255, 255, 0.175);
+    background-color: #232021;
     height: 4rem;
     line-height: 4rem;
     margin: -4rem auto 0 auto;
@@ -69,4 +69,20 @@
 #nav a {
     color: #ffffff;
     border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+#nav .nav-link-spring a:hover {
+    color: #5f9e3a !important;
+}
+
+#nav .nav-link-autumn a:hover {
+    color: #f6961e !important;
+}
+
+#nav ul.links .nav-link-spring li.active a {
+    color: #5f9e3a !important;
+}
+
+#nav ul.links .nav-link-autumn li.active a {
+    color: #f6961e !important;
 }

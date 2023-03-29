@@ -12,49 +12,7 @@ export default class PageHome extends React.Component {
 		super(props);
 
 		this.state = {
-			events: null,
 		};
-	}
-
-	componentDidMount() {
-		this.getEvents();
-	}
-
-	componentDidUpdate(prevProps) {
-		if (prevProps.lhc !== this.props.lhc) {
-			this.getEvents();
-		}
-
-		if (prevProps.analytics !== this.props.analytics) {
-			this.getEvents();
-		}
-	}
-
-	getEvents(page) {
-		if (this.props.lhc && this.props.analytics) {
-			const tv = this.props.analytics.taxonomy_values
-				.filter((v) => v.category === "EVENT CATEGORY")
-				.filter((v) => v.name === "CSWL 2023 - SPRING EDITION");
-
-			if (tv.length > 0) {
-				const params = {
-					entities: this.props.lhc.id,
-					type: "EVENT",
-					taxonomy_values: tv.map((t) => t.id),
-					page: page || 1
-				};
-
-				getRequest.call(this, "public/get_public_articles?" + dictToURI(params), (data) => {
-					this.setState({
-						events: data,
-					});
-				}, (response) => {
-					nm.warning(response.statusText);
-				}, (error) => {
-					nm.error(error.message);
-				});
-			}
-		}
 	}
 
 	scrollToElement() {
@@ -71,12 +29,7 @@ export default class PageHome extends React.Component {
 
 	render() {
 		return (
-			<div id={"PageHome"} id={"main"}>
-				<img
-					src={"/img/CSWL23_SPRING_nodate_CSWL 16-9.jpg"}
-					alt="CSWL 2023 SPRING"
-				/>
-
+			<div id={"main"} className={"PageHome"}>
 				<p>
 					The CYBERSECURITY Week Luxembourg - Spring Edition 2023 will frame the events
 					that will be organised by CYBERSECURITY Luxembourg ecosystem members pursuing
@@ -89,28 +42,27 @@ export default class PageHome extends React.Component {
 					cyber resilience, in the other hand.
 				</p>
 
-				<h2>Agenda</h2>
+				<h2>Editions</h2>
 
-				<section className="posts">
-					{this.state.events
-						? this.state.events.items.map((e) => (
-							<Event
-								info={e}
-							/>
-						))
-						: <Loading
-							height={400}
-						/>
-					}
-				</section>
+				<div className={"editions"}>
+					<div className={"edition"}>
+						<Link to="spring">
+							<div className={"spring"}>
+								<i className="fa fa-pagelines"/>
+								<h2>Spring</h2>
+							</div>
+						</Link>
+					</div>
 
-				{this.state.events
-					&& this.state.events.pagination.total === 0
-					&& <Message
-						text={"No event found"}
-						height={400}
-					/>
-				}
+					<div className={"edition"}>
+						<Link to="autumn">
+							<div className={"autumn"}>
+								<i className="fa fa-leaf"/>
+								<h2>Automn</h2>
+							</div>
+						</Link>
+					</div>
+				</div>
 			</div>
 		);
 	}
