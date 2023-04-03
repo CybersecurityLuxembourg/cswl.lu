@@ -86,3 +86,7 @@
     -webkit-transition: background-image 1s ease-in-out;
     transition: background-image 1s ease-in-out;
 }
+
+#bg:after {
+    content: url("../img/cswl_2023_main.png") url("../img/cswl_2023_spring.png") url("../img/cswl_2023_autumn.png");
+}
