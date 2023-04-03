@@ -141,6 +141,9 @@ class InsideApp extends React.Component {
 				</div>
 
 				<div id="bg" className="bg fixed" style={{ transform: "none" }}/>
+				<link rel="preload" as="image" href="/img/cswl_2023_main.png"/>
+				<link rel="preload" as="image" href="/img/cswl_2023_spring.png"/>
+				<link rel="preload" as="image" href="/img/cswl_2023_autumn.png"/>
 				{/* <Footer/> */}
 			</div>
 		);
