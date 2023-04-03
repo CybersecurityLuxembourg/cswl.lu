@@ -43,15 +43,12 @@ class InsideApp extends React.Component {
 		const element = document.getElementById("bg");
 
 		if (location.pathname === "/spring") {
-			element.style.backgroundImage = "url('/img/cswl_2023_spring.png')";
+			element.style.backgroundImage = "url('../img/cswl_2023_spring.png')";
 		} else if (location.pathname === "/autumn") {
-			element.style.backgroundImage = "url('/img/cswl_2023_autumn.png')";
+			element.style.backgroundImage = "url('../img/cswl_2023_autumn.png')";
 		} else {
-			element.style.backgroundImage = "url('/img/cswl_2023_main.png')";
+			element.style.backgroundImage = "url('../img/cswl_2023_main.png')";
 		}
-
-		element.setAttribute("id", "bgg");
-		element.setAttribute("id", "bg");
 	}
 
 	componentWillUnmount() {
