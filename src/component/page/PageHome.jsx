@@ -29,7 +29,7 @@ export default class PageHome extends React.Component {
 
 	render() {
 		return (
-			<div id={"main"} className={"PageHome"}>
+			<div id={"main"} className={"PageHome fade-in"}>
 				<p>
 					The CYBERSECURITY Week Luxembourg - Spring Edition 2023 will frame the events
 					that will be organised by CYBERSECURITY Luxembourg ecosystem members pursuing

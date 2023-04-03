@@ -29,8 +29,7 @@ class InsideApp extends React.Component {
 		this.getLHC();
 
 		addEventListener("scroll", (event) => {
-			console.log(window.innerHeight, document.documentElement.scrollTop);
-			document.getElementById("bg").style.opacity = 1 - (document.documentElement.scrollTop / window.innerHeight * 2);
+			document.getElementById("bg").style.opacity = 1 - (document.documentElement.scrollTop / window.innerHeight * 1.5);
 		});
 	}
 
@@ -41,13 +40,12 @@ class InsideApp extends React.Component {
 	}
 
 	changeBackgroud() {
-		console.log(location);
 		if (location.pathname === "/spring") {
-			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_spring.jpg')";
+			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_2023_spring.png')";
 		} else if (location.pathname === "/autumn") {
-			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_autumn.jpg')";
+			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_2023_autumn.png')";
 		} else {
-			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_spring.jpg')";
+			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_2023_main.png')";
 		}
 	}
 

@@ -71,7 +71,7 @@ export default class PageSpring extends React.Component {
 
 	render() {
 		return (
-			<div id={"PageSpring"} id={"main"}>
+			<div id={"main"} className="PageSpring fade-in">
 				<h2>Agenda</h2>
 
 				<section className="posts">

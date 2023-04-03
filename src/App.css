@@ -106,7 +106,7 @@ section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;}
 
 ol,
 ul {
@@ -1671,6 +1671,7 @@ a.image {
 
 /* Actions */
 ul.actions {
+  margin-bottom: 5px;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -2035,7 +2036,7 @@ table.alt tbody tr td {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #e7e8e8;
+    background-color: transparent;
     background-size: auto, auto, 100% auto;
     background-position: center, center, top center;
     background-repeat: repeat, no-repeat, no-repeat;
@@ -2055,7 +2056,7 @@ table.alt tbody tr td {
     -webkit-transition-delay: 0.75s;
     -ms-transition-delay: 0.75s;
     transition-delay: 0.75s;
-    background: #1e252d;
+    background: none;
     content: '';
     display: block;
     height: 100%;
@@ -2978,3 +2979,20 @@ img {
   max-width: 100%; }
 
 /*# sourceMappingURL=main.css.map */
+
+#App {
+  background-image: url("img/cswl_2023_bg.jpg");
+  background-repeat: repeat;
+  background-size: contain; 
+}
+
+.fade-in {
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  -moz-transition-delay: 0.75s;
+  -webkit-transition-delay: 0.75s;
+  -ms-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+}
