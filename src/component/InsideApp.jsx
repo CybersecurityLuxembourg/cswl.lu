@@ -40,13 +40,18 @@ class InsideApp extends React.Component {
 	}
 
 	changeBackgroud() {
+		const element = document.getElementById("bg");
+
 		if (location.pathname === "/spring") {
-			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_2023_spring.png')";
+			element.style.backgroundImage = "url('/img/cswl_2023_spring.png')";
 		} else if (location.pathname === "/autumn") {
-			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_2023_autumn.png')";
+			element.style.backgroundImage = "url('/img/cswl_2023_autumn.png')";
 		} else {
-			document.getElementById("bg").style.backgroundImage = "url('/img/cswl_2023_main.png')";
+			element.style.backgroundImage = "url('/img/cswl_2023_main.png')";
 		}
+
+		element.setAttribute("id", "bgg");
+		element.setAttribute("id", "bg");
 	}
 
 	componentWillUnmount() {

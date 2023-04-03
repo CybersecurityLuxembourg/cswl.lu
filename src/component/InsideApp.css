@@ -64,10 +64,25 @@
   100% { opacity: 1; }
 }
 
+@keyframes lightFadeIn {
+  0% { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+.light-fade-in-effect {
+    animation: lightFadeIn 1s;
+}
+
+.fade-in-effect {
+    animation: fadeIn 1s;
+}
+
 #bg {
     background-size: contain !important;
     background-repeat: no-repeat !important;
     width: 100% !important;
     height: 100vh !important;
     animation: fadeIn 1s;
+    -webkit-transition: background-image 1s ease-in-out;
+    transition: background-image 1s ease-in-out;
 }

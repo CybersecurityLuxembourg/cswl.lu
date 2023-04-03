@@ -71,7 +71,7 @@ export default class PageAutumn extends React.Component {
 
 	render() {
 		return (
-			<div id={"main"} className="PageAutumn fade-in">
+			<div id={"main"} className="PageAutumn light-fade-in-effect">
 				<h2>Agenda</h2>
 
 				<section className="posts">
