@@ -76,16 +76,19 @@ export default class PageSpring extends React.Component {
 
 				<section className="posts">
 					{this.state.events
-						? this.state.events.items.map((e) => (
+						&& this.state.events.items.map((e) => (
 							<Event
 								info={e}
 							/>
 						))
-						: <Loading
-							height={400}
-						/>
 					}
 				</section>
+
+				{!this.state.events
+					&& <Loading
+						height={400}
+					/>
+				}
 
 				{this.state.events
 					&& this.state.events.pagination.total === 0
