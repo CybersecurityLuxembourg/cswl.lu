@@ -6,6 +6,7 @@ import Message from "../box/Message.jsx";
 import { getRequest } from "../../utils/request.jsx";
 import { dictToURI } from "../../utils/url.jsx";
 import Event from "../item/Event.jsx";
+import { getPrivateAppURL } from "../../utils/env.jsx";
 
 export default class PageHome extends React.Component {
 	constructor(props) {
@@ -42,26 +43,32 @@ export default class PageHome extends React.Component {
 						This year, the CSWL will be divided into 2 key sessions:
 					</p>
 
-					<ul>
-						<li>Spring edition, in June 2023</li>
-						<ul>
-							<li>Core event: <a
+					<div className={"editions-small"}>
+						<div className={"edition"}/>
+						<div className={"edition"}>
+							<a
 								href="https://www.ictspring.com/"
 								rel="noreferrer"
 								target="_blank">
-								ICT Spring
-							</a> with, for the FIRST time, a CYBERSECURITY Village</li>
-						</ul>
-						<li>Autumn edition, in October 2023</li>
-						<ul>
-							<li>Core event: <a
+								<img
+									src={"/img/ict_spring_2023.png"}
+									alt="CSWL 2023 Spring light"
+								/>
+							</a>
+						</div>
+						<div className={"edition"}>
+							<a
 								href="https://hack.lu/"
 								rel="noreferrer"
 								target="_blank">
-								hack.lu
-							</a></li>
-						</ul>
-					</ul>
+								<img
+									src={"/img/hack_lu_2023.png"}
+									alt="CSWL 2023 Spring light"
+								/>
+							</a>
+						</div>
+						<div className={"edition"}/>
+					</div>
 
 					<p>
 						A series of events will be organised addressing different
@@ -94,6 +101,42 @@ export default class PageHome extends React.Component {
 							/>
 						</Link>
 					</div>
+				</div>
+
+				<div className={"editions"}>
+					<div className={"edition"}/>
+
+					<div className={"brand-kit"}>
+						<a
+							href={getPrivateAppURL()}
+							rel="noreferrer"
+							target="_blank"
+							alt="Brand kit"
+						>
+							<i className="fa fa-calendar"/>
+							<h4>Add your event</h4>
+						</a>
+					</div>
+
+					<div className={"edition"}/>
+				</div>
+
+				<div className={"editions"}>
+					<div className={"edition"}/>
+
+					<div className={"brand-kit"}>
+						<a
+							href={"https://cloudshare.secin.lu/index.php/s/56iykxe2s7SnGyG"}
+							rel="noreferrer"
+							target="_blank"
+							alt="Brand kit"
+						>
+							<i className="fa fa-picture-o"/>
+							<h4>Download the brand kit</h4>
+						</a>
+					</div>
+
+					<div className={"edition"}/>
 				</div>
 			</div>
 		);

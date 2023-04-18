@@ -3,12 +3,27 @@
 	display: flex;
 }
 
+.PageHome .editions-small {
+	display: flex;
+}
+
+.PageHome .editions-small .edition {
+	padding: 10px 20px;
+	border: none !important;
+	text-align: center;
+	flex: 1;
+}
+
+.PageHome .editions-small .edition img {
+  object-fit: cover;
+}
+
 .PageHome .description {
 	padding-top: 15px;
 	padding-bottom: 10px;
 }
 
-.PageHome .edition {
+.PageHome .editions .edition {
 	padding: 10px 20px;
 	border: none !important;
 	text-align: center;
@@ -47,4 +62,65 @@
   border: none !important;
   padding-top: 0em !important;
   padding-bottom: 0em !important;
+}
+
+.PageHome .private-space {
+	text-align: center;
+	color: #212931;
+}
+
+.PageHome .private-space h4 {
+	font-size: 16px !important;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.PageHome .private-space:hover h4 {
+	font-size: 18px !important;
+}
+
+
+.PageHome .private-space i {
+	margin: 8px 0px;
+	font-size: 80px;
+	-webkit-transition: font-size .5s ease;
+	-moz-transition: font-size .5s ease;
+	-o-transition: font-size .5s ease;
+	transition: font-size .5s ease;
+}
+
+.PageHome .private-space:hover i {
+	font-size: 100px;
+}
+
+.PageHome .brand-kit {
+	text-align: center;
+	color: #212931;
+}
+
+.PageHome .brand-kit h4 {
+	font-size: 16px !important;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.PageHome .brand-kit:hover h4 {
+	font-size: 18px !important;
+}
+
+.PageHome .brand-kit i {
+	margin: 8px 0px;
+	font-size: 80px;
+	-webkit-transition: font-size .5s ease;
+	-moz-transition: font-size .5s ease;
+	-o-transition: font-size .5s ease;
+	transition: font-size .5s ease;
+}
+
+.PageHome .brand-kit:hover i {
+	font-size: 100px;
 }
