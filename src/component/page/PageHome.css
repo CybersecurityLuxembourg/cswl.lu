@@ -3,6 +3,11 @@
 	display: flex;
 }
 
+.PageHome .description {
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
 .PageHome .edition {
 	padding: 10px 20px;
 	border: none !important;
@@ -10,13 +15,15 @@
 	flex: 1;
 }
 
-.PageHome .edition h2 {
-	color: white;
+.PageHome .edition:hover {
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	transition: .5s ease;
 }
 
-.PageHome .edition i {
-	font-size: 45px;
-	color: #ffffff;
+.PageHome .edition a {
+	border: none !important;
 }
 
 .PageHome .spring {
@@ -29,13 +36,15 @@
 	background-color: #f6961e;
 }
 
-.PageHome .spring:hover i, .PageHome .autumn:hover i {
-	font-size: 90px;
-	transition: all 500ms;
+.PageHome ul {
+  border: none !important;
+  padding-left: 8em !important;
+  padding-top: 0em !important;
+  padding-bottom: 0em !important;
 }
 
-.PageHome .spring:hover h2, .PageHome .autumn:hover h2 {
-	font-size: 22px;
-	transition: all 500ms;
+.PageHome li {
+  border: none !important;
+  padding-top: 0em !important;
+  padding-bottom: 0em !important;
 }
-

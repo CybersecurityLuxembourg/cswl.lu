@@ -2994,3 +2994,9 @@ img {
 .page-fade-in {
   animation: fadeIn 1s;
 }
+
+p {
+  border: none !important;
+  padding-top: .8em !important;
+  padding-bottom: .4em !important;
+}
