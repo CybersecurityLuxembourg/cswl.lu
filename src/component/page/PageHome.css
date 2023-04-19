@@ -30,6 +30,12 @@
 	flex: 1;
 }
 
+.PageHome .editions-small .edition p {
+	font-size: 10px;
+	line-height: 1.4;
+	text-align: center;
+}
+
 .PageHome .edition:hover {
 	-webkit-transform: scale(0.9);
 	-ms-transform: scale(0.9);

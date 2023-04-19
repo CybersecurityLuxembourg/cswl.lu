@@ -46,6 +46,7 @@ export default class PageHome extends React.Component {
 					<div className={"editions-small"}>
 						<div className={"edition"}/>
 						<div className={"edition"}>
+							<h3>Spring edition, in June 2023</h3>
 							<a
 								href="https://www.ictspring.com/"
 								rel="noreferrer"
@@ -55,8 +56,16 @@ export default class PageHome extends React.Component {
 									alt="CSWL 2023 Spring light"
 								/>
 							</a>
+							<p>Core event: <a
+								href="https://www.ictspring.com/"
+								rel="noreferrer"
+								target="_blank">
+								ICT Spring
+							</a> with, for the FIRST
+							time, a CYBERSECURITY Village</p>
 						</div>
 						<div className={"edition"}>
+							<h3>Autumn edition, in October 2023</h3>
 							<a
 								href="https://hack.lu/"
 								rel="noreferrer"
@@ -66,6 +75,12 @@ export default class PageHome extends React.Component {
 									alt="CSWL 2023 Spring light"
 								/>
 							</a>
+							<p>Core event: <a
+								href="https://hack.lu/"
+								rel="noreferrer"
+								target="_blank">
+								hack.lu
+							</a></p>
 						</div>
 						<div className={"edition"}/>
 					</div>
