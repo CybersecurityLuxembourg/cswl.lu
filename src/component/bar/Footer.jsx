@@ -68,7 +68,7 @@ export default class Footer extends React.Component {
 								target="_blank"
 								title="Terms of use"
 								className="text-capitalize">
-								<i className="fa fa-file-text"/> Terms of use
+								<i className="fa fa-file-text"/> Terms of Service & Privacy Policy
 							</a>
 						</div>
 					</div>
