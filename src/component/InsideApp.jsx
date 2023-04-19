@@ -144,7 +144,7 @@ class InsideApp extends React.Component {
 				<link rel="preload" as="image" href="/img/cswl_2023_main.png"/>
 				<link rel="preload" as="image" href="/img/cswl_2023_spring.png"/>
 				<link rel="preload" as="image" href="/img/cswl_2023_autumn.png"/>
-				{/* <Footer/> */}
+				<Footer/>
 			</div>
 		);
 	}
