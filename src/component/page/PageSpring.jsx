@@ -5,6 +5,7 @@ import Loading from "../box/Loading.jsx";
 import Message from "../box/Message.jsx";
 import { getRequest } from "../../utils/request.jsx";
 import { dictToURI } from "../../utils/url.jsx";
+import { getPrivateAppURL } from "../../utils/env.jsx";
 import Event from "../item/Event.jsx";
 
 export default class PageSpring extends React.Component {
@@ -97,6 +98,24 @@ export default class PageSpring extends React.Component {
 						height={400}
 					/>
 				}
+
+				<div className={"editions"}>
+					<div className={"edition"}/>
+
+					<div className={"private-space"}>
+						<a
+							href={getPrivateAppURL()}
+							rel="noreferrer"
+							target="_blank"
+							alt="Brand kit"
+						>
+							<i className="fa fa-calendar"/>
+							<h4>Add your event</h4>
+						</a>
+					</div>
+
+					<div className={"edition"}/>
+				</div>
 			</div>
 		);
 	}

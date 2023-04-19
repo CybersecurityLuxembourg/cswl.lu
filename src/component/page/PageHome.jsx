@@ -139,7 +139,7 @@ export default class PageHome extends React.Component {
 				<div className={"editions"}>
 					<div className={"edition"}/>
 
-					<div className={"brand-kit"}>
+					<div className={"private-space"}>
 						<a
 							href={"https://cloudshare.secin.lu/index.php/s/56iykxe2s7SnGyG"}
 							rel="noreferrer"

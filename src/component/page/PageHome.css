@@ -32,7 +32,7 @@
 
 .PageHome .editions-small .edition p {
 	font-size: 10px;
-	line-height: 1.4;
+	line-height: .8rem;
 	text-align: center;
 }
 
@@ -73,32 +73,6 @@
 .PageHome .private-space {
 	text-align: center;
 	color: #212931;
-}
-
-.PageHome .private-space h4 {
-	font-size: 16px !important;
-	-webkit-transition: .3s ease;
-	-moz-transition: .3s ease;
-	-o-transition: .3s ease;
-	transition: .3s ease;
-}
-
-.PageHome .private-space:hover h4 {
-	font-size: 18px !important;
-}
-
-
-.PageHome .private-space i {
-	margin: 8px 0px;
-	font-size: 80px;
-	-webkit-transition: font-size .5s ease;
-	-moz-transition: font-size .5s ease;
-	-o-transition: font-size .5s ease;
-	transition: font-size .5s ease;
-}
-
-.PageHome .private-space:hover i {
-	font-size: 100px;
 }
 
 .PageHome .brand-kit {

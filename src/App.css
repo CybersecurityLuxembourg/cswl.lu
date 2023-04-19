@@ -3001,3 +3001,34 @@ p {
   padding-bottom: .1em !important;
   line-height: 2;
 }
+
+.private-space {
+  text-align: center;
+  color: #212931;
+}
+
+.private-space h4 {
+  font-size: 16px !important;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.private-space:hover h4 {
+  font-size: 18px !important;
+}
+
+
+.private-space i {
+  margin: 8px 0px;
+  font-size: 80px;
+  -webkit-transition: font-size .5s ease;
+  -moz-transition: font-size .5s ease;
+  -o-transition: font-size .5s ease;
+  transition: font-size .5s ease;
+}
+
+.private-space:hover i {
+  font-size: 100px;
+}
