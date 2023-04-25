@@ -1,0 +1,33 @@
+.BoxAddYourEvent {
+  text-align: center;
+  color: #212931;
+  height: 100% !important;
+  vertical-align: middle;
+  padding: 50px 0px;
+}
+
+.BoxAddYourEvent h4 {
+  font-size: 22px !important;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.BoxAddYourEvent:hover h4 {
+  font-size: 24px !important;
+}
+
+
+.BoxAddYourEvent i {
+  margin: 8px 0px;
+  font-size: 120px;
+  -webkit-transition: font-size .5s ease;
+  -moz-transition: font-size .5s ease;
+  -o-transition: font-size .5s ease;
+  transition: font-size .5s ease;
+}
+
+.BoxAddYourEvent:hover i {
+  font-size: 150px;
+}

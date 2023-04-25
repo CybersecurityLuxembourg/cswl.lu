@@ -3,6 +3,7 @@ import "./PageAutumn.css";
 import { Link } from "react-router-dom";
 import Loading from "../box/Loading.jsx";
 import Message from "../box/Message.jsx";
+import BoxAddYourEvent from "../box/BoxAddYourEvent.jsx";
 import { getRequest } from "../../utils/request.jsx";
 import { dictToURI } from "../../utils/url.jsx";
 import { getPrivateAppURL } from "../../utils/env.jsx";
@@ -58,12 +59,22 @@ export default class PageAutumn extends React.Component {
 		}
 	}
 
-	scrollToElement() {
-		const div = document.getElementById(location.hash && location.hash.replaceAll("#", ""));
+	getContent() {
+		const content = [];
 
-		if (div) {
-			div.scrollIntoView({ behavior: "smooth" });
-		}
+		this.state.events.items.map((e) => {
+			content.push(
+				<Event
+					info={e}
+				/>
+			);
+		})
+
+		content.splice(1, 0, <article>
+			<BoxAddYourEvent/>
+		</article>);
+
+		return content
 	}
 
 	changeState(field, value) {
@@ -77,11 +88,7 @@ export default class PageAutumn extends React.Component {
 
 				<section className="posts">
 					{this.state.events
-						&& this.state.events.items.map((e) => (
-							<Event
-								info={e}
-							/>
-						))
+						&& this.getContent()
 					}
 				</section>
 
@@ -98,24 +105,6 @@ export default class PageAutumn extends React.Component {
 						height={400}
 					/>
 				}
-
-				<div className={"editions"}>
-					<div className={"edition"}/>
-
-					<div className={"private-space"}>
-						<a
-							href={getPrivateAppURL()}
-							rel="noreferrer"
-							target="_blank"
-							alt="Brand kit"
-						>
-							<i className="fa fa-calendar"/>
-							<h4>Add your event</h4>
-						</a>
-					</div>
-
-					<div className={"edition"}/>
-				</div>
 			</div>
 		);
 	}

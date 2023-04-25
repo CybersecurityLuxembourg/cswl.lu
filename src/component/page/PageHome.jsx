@@ -3,6 +3,7 @@ import "./PageHome.css";
 import { Link } from "react-router-dom";
 import Loading from "../box/Loading.jsx";
 import Message from "../box/Message.jsx";
+import BoxAddYourEvent from "../box/BoxAddYourEvent.jsx";
 import { getRequest } from "../../utils/request.jsx";
 import { dictToURI } from "../../utils/url.jsx";
 import Event from "../item/Event.jsx";
@@ -121,17 +122,7 @@ export default class PageHome extends React.Component {
 				<div className={"editions"}>
 					<div className={"edition"}/>
 
-					<div className={"brand-kit"}>
-						<a
-							href={getPrivateAppURL()}
-							rel="noreferrer"
-							target="_blank"
-							alt="Brand kit"
-						>
-							<i className="fa fa-calendar"/>
-							<h4>Add your event</h4>
-						</a>
-					</div>
+					<BoxAddYourEvent/>
 
 					<div className={"edition"}/>
 				</div>
@@ -139,7 +130,7 @@ export default class PageHome extends React.Component {
 				<div className={"editions"}>
 					<div className={"edition"}/>
 
-					<div className={"private-space"}>
+					<div className={"brand-kit"}>
 						<a
 							href={"https://cloudshare.secin.lu/index.php/s/56iykxe2s7SnGyG"}
 							rel="noreferrer"
