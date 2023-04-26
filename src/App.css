@@ -189,10 +189,10 @@ body {
   color: #212931; }
 
 body, input, select, textarea {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: source-sans-pro,Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  line-height: 2.375; }
+  line-height: 1.5; }
 
 a {
   -moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -1495,7 +1495,7 @@ input[type="radio"] {
     display: inline-block;
     font-size: 1rem;
     letter-spacing: 0;
-    font-family: "Merriweather", Georgia, serif;
+    font-family: "Merriweather", Georgia, serif;inset: ;
     text-transform: none;
     font-weight: 300;
     padding-left: 2.8rem;
@@ -2999,5 +2999,5 @@ p {
   border: none !important;
   padding-top: .4em !important;
   padding-bottom: .1em !important;
-  line-height: 2;
+  line-height: 1.8;
 }

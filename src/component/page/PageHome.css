@@ -31,9 +31,10 @@
 }
 
 .PageHome .editions-small .edition p {
-	font-size: 13px;
-	line-height: .9rem;
+	font-size: 15px;
+	line-height: 1.1rem;
 	text-align: center;
+	font-weight: bold;
 }
 
 .PageHome .edition:hover {
