@@ -1,3 +1,12 @@
+@media (max-width: 800px) {
+  .PageHome .editions {
+		flex-direction: column;
+	}
+
+	.PageHome .editions-small {
+		flex-direction: column;
+	}
+}
 
 .PageHome .editions {
 	display: flex;
@@ -8,9 +17,13 @@
 }
 
 .PageHome .editions-small .edition {
-	padding: 10px 20px;
+	padding: 10px 20px 30px 20px;
 	border: none !important;
 	text-align: center;
+	flex: 2;
+}
+
+.PageHome .editions-small .edition-white {
 	flex: 1;
 }
 
