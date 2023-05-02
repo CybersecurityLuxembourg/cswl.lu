@@ -86,3 +86,21 @@
     -webkit-transition: background-image 1s ease-in-out;
     transition: background-image 1s ease-in-out;
 }
+
+.popup-overlay {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.popup-content {
+    padding: 30px 50px 70px 50px;
+    background-color: white;
+    opacity: 1;
+    width: 800px;
+    max-height: 100%;
+    max-width: 100%;
+    overflow-y: scroll;
+}
+
+.popup-content img {
+    margin: 10px 0px 20px 0px;
+}

@@ -31,3 +31,14 @@
 .BoxAddYourEvent:hover i {
   font-size: 150px;
 }
+
+.BoxAddYourEvent i.fa-plus-circle {
+  font-size: 40px;
+  margin: 0px 0px 50px 10px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.BoxAddYourEvent a {
+  cursor: pointer;
+}
