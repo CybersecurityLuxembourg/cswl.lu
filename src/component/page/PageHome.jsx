@@ -48,13 +48,7 @@ export default class PageHome extends React.Component {
 						<div className={"edition-white"}/>
 						<div className={"edition"}>
 							<h3>Spring edition<br/>in June 2023</h3>
-							<p>Core event:<br/> <a
-								href="https://www.ictspring.com/"
-								rel="noreferrer"
-								target="_blank">
-								ICT Spring
-							</a><br/>with, for the FIRST
-							time, a CYBERSECURITY Village</p>
+							<p>Core event:</p>
 							<a
 								href="https://www.ictspring.com/"
 								rel="noreferrer"
@@ -67,12 +61,7 @@ export default class PageHome extends React.Component {
 						</div>
 						<div className={"edition"}>
 							<h3>Autumn edition<br/>in October 2023</h3>
-							<p>Core event:<br/> <a
-								href="https://hack.lu/"
-								rel="noreferrer"
-								target="_blank">
-								hack.lu
-							</a></p>
+							<p>Core event:</p>
 							<a
 								href="https://hack.lu/"
 								rel="noreferrer"
