@@ -37,6 +37,11 @@ export default class Menu extends React.Component {
 							<li className={window.location.pathname === "/autumn" && "active"}><a>Autumn Edition</a></li>
 						</Link>
 					</Nav.Link>
+					<Nav.Link className="nav-link-autumn">
+						<Link to="/partners">
+							<li className={window.location.pathname === "/partners" && "active"}><a>Partners</a></li>
+						</Link>
+					</Nav.Link>
 				</ul>
 				<ul className="icons">
 					<li><a href="https://twitter.com/cyberluxembourg" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
