@@ -13,23 +13,31 @@ export default class Entity extends Component {
 		};
 	}
 
+	getContent() {
+		if (this.props.info.website) {
+			return <a
+				href={this.props.info.website}
+				target={"_blank"}
+				rel={"noreferrer"}
+			>
+				{this.getImage()}
+			</a>
+		}
+
+		return this.getImage();
+	}
+
+	getImage() {
+		if (this.props.info.image) {
+			return <img src={getApiURL() + "public/get_public_image/" + this.props.info.image}/>
+		}
+
+		return <i className="fa fa-building"/>
+	}
+
 	render() {
 		return <article className="Entity">
-			<header>
-				<h2>
-					<a
-						href={this.props.info.link}
-						target="_blank"
-						rel="noreferrer"
-					>
-						{this.props.info.name}
-					</a>
-				</h2>
-			</header>
-			
-			{this.props.info.image
-				? <img src={getApiURL() + "public/get_public_image/" + this.props.info.image}/>
-				: <i className="fa fa-building"/>}
+			{this.getContent()}
 		</article>;
 	}
 }

@@ -1,9 +1,25 @@
 
+.Entity a {
+    height: 100%;
+    text-decoration: none;
+    border: none !important;
+}
+
 .Entity i {
     font-size: 70px;
     color: #AAA;
+    padding: 15px;
 }
 
 .Entity img {
     max-height: 200px;
+    max-width: 300px;
+    padding: 15px;
+}
+
+.Entity i:hover, .Entity img:hover {
+    background-color: rgba(0, 159, 227, .2);
+    -webkit-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
 }
