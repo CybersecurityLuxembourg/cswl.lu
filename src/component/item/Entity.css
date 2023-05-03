@@ -1,6 +1,11 @@
 
+.Entity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .Entity a {
-    height: 100%;
     text-decoration: none;
     border: none !important;
 }
@@ -12,9 +17,9 @@
 }
 
 .Entity img {
+    padding: 15px;
     max-height: 200px;
     max-width: 300px;
-    padding: 15px;
 }
 
 .Entity i:hover, .Entity img:hover {

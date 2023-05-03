@@ -32,12 +32,15 @@ export default class Entity extends Component {
 			return <img src={getApiURL() + "public/get_public_image/" + this.props.info.image}/>
 		}
 
-		return <i className="fa fa-building"/>
+		return <div>
+			<i className="fa fa-building"/>
+			<h3>{this.props.info.name}</h3>
+		</div>;
 	}
 
 	render() {
 		return <article className="Entity">
-			{this.getContent()}
+			<div>{this.getContent()}</div>
 		</article>;
 	}
 }
