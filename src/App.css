@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
+
+@font-face {
+    font-family: 'Poppins Light';
+    src: url('./font/Poppins-Light.ttf');
+}
 /*
     Massively by HTML5 UP
     html5up.net | @ajlkn
@@ -175,7 +180,7 @@ body {
 
 /* Type */
 html {
-  font-size: 16pt; }
+  font-size: 14pt; }
   @media screen and (max-width: 1680px) {
     html {
       font-size: 12pt; } }
@@ -189,7 +194,7 @@ body {
   color: #212931; }
 
 body, input, select, textarea {
-  font-family: source-sans-pro,Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  font-family:"Poppins Light",source-sans-pro,Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5; }
