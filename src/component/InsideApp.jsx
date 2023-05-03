@@ -11,6 +11,7 @@ import PageHome from "./page/PageHome.jsx";
 import PageAutumn from "./page/PageAutumn.jsx";
 import PageSpring from "./page/PageSpring.jsx";
 import PagePartners from "./page/PagePartners.jsx";
+import PageGala from "./page/PageGala.jsx";
 import Page404 from "./page/Page404.jsx";
 import { dictToURI } from "../utils/url.jsx";
 
@@ -134,6 +135,15 @@ class InsideApp extends React.Component {
 							exact
 							path="/partners"
 							render={(props) => <PagePartners
+								lhc={this.state.lhc}
+								analytics={this.state.analytics}
+								{...props}
+							/>}
+						/>
+						<Route
+							exact
+							path="/gala"
+							render={(props) => <PageGala
 								lhc={this.state.lhc}
 								analytics={this.state.analytics}
 								{...props}
