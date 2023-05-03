@@ -76,7 +76,7 @@ export default class PageHome extends React.Component {
 					</div>
 
 					<p>
-						A series of events will be organised addressing different
+						In addition, a series of events will be organised addressing different
 						types of topics, targeting a wide range of audiences. 
 					</p>
 
