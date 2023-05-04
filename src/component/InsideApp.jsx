@@ -63,6 +63,8 @@ class InsideApp extends React.Component {
 			element.style.backgroundImage = "url('../img/cswl_2023_spring.png')";
 		} else if (location.pathname === "/autumn") {
 			element.style.backgroundImage = "url('../img/cswl_2023_autumn.png')";
+		} else if (location.pathname === "/gala") {
+			element.style.backgroundImage = "url('../img/cswl_2023_gala.png')";
 		} else {
 			element.style.backgroundImage = "url('../img/cswl_2023_main.png')";
 		}
@@ -180,6 +182,7 @@ class InsideApp extends React.Component {
 				<link rel="preload" as="image" href="/img/cswl_2023_main.png"/>
 				<link rel="preload" as="image" href="/img/cswl_2023_spring.png"/>
 				<link rel="preload" as="image" href="/img/cswl_2023_autumn.png"/>
+				<link rel="preload" as="image" href="/img/cswl_2023_gala.png"/>
 				<Footer/>
 			</div>
 		);
