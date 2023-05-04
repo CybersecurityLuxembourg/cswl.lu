@@ -107,7 +107,7 @@ export default class PageGala extends React.Component {
 				<h2>Save the date!</h2>
 
 				<p>The traditional Gala & Awards Night will
-				take place on 19 October 2023 evening.</p>
+				take place on <b>19 October 2023</b> evening.</p>
 
 				<p>Let’s recall some of last year’s memories!</p>
 
