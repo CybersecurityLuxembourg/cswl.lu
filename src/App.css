@@ -2989,6 +2989,15 @@ img {
   background-image: url("img/cswl_2023_bg.jpg");
   background-repeat: repeat;
   background-size: contain; 
+  animation: fadeIn 1s;
+  -webkit-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+
+.App-dark {
+  background-image: url("img/cswl_2023_bg_dark.png") !important;
+  background-repeat: repeat !important;
+  background-size: contain !important; 
 }
 
 @keyframes fadeIn {

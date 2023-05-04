@@ -26,7 +26,8 @@ class InsideApp extends React.Component {
 	}
 
 	componentDidMount() {
-		this.changeBackgroud();
+		this.changeBackground();
+		this.changeLogo();
 		this.getAnalytics();
 		this.getLHC();
 
@@ -36,12 +37,26 @@ class InsideApp extends React.Component {
 	}
 
 	componentWillMount() {
-		this.unlisten = this.props.history.listen((location, action) => {
-			this.changeBackgroud();
+		this.unlistenLogo = this.props.history.listen((location, action) => {
+			this.changeLogo();
+		});
+
+		this.unlistenBackground = this.props.history.listen((location, action) => {
+			this.changeBackground();
 		});
 	}
 
-	changeBackgroud() {
+	changeBackground() {
+		const element = document.getElementById("App");
+
+		if (location.pathname !== "/gala") {
+			element.style.backgroundImage = "url('../img/cswl_2023_bg.jpg')";
+		} else {
+			element.style.backgroundImage = "url('../img/cswl_2023_bg_dark.png')";
+		}
+	}
+
+	changeLogo() {
 		const element = document.getElementById("bg");
 
 		if (location.pathname === "/spring") {
@@ -54,7 +69,8 @@ class InsideApp extends React.Component {
 	}
 
 	componentWillUnmount() {
-		this.unlisten();
+		this.unlistenLogo();
+		this.unlistenBackground();
 	}
 
 	getLHC() {
