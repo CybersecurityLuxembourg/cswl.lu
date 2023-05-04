@@ -34,9 +34,15 @@ export default class PageHome extends React.Component {
 			<div id={"main"} className={"PageHome light-fade-in-effect"}>
 				<div className={"description"}>
 					<p>
-						The CYBERSECURITY Week Luxembourg 2023 will frame the events
+						The CYBERSECURITY Week Luxembourg 2023, the national campaign
+						coordinated by the <a
+							href="https://www.lhc.lu"
+							target="_blank"
+							rel="noreferrer">
+							Luxembourg House of Cybersecurity</a>,
+						will frame the events
 						that will be organised by CYBERSECURITY Luxembourg ecosystem
-						members pursuing the objective of widening and increasing
+						members pursuing the objective of widening and achieving
 						cybersecurity awareness as well as fostering collaboration. 
 					</p>
 
