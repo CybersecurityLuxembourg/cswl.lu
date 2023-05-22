@@ -100,7 +100,7 @@ export default class PageAutumn extends React.Component {
 					)}
 				</section>
 
-				<h2>Agenda</h2>
+				<h2>Full agenda</h2>
 
 				<section className="posts">
 					{this.state.events
