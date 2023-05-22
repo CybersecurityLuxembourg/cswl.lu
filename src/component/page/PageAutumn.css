@@ -2,3 +2,15 @@
 .PageAutumn .PageAutumn-section {
 	padding: 60px 0px 20px 0px;
 }
+
+.PageAutumn .PageAutumn-coreevent {
+	display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+
+@media screen and (min-width: 980px) {
+	.PageAutumn .PageAutumn-coreevent article.Event {
+		width: 50%;
+	}
+}

@@ -88,7 +88,7 @@ export default class PageSpring extends React.Component {
 			<div id={"main"} className="PageSpring light-fade-in-effect">
 				<h2>Core event</h2>
 
-				<section>
+				<section className="PageSpring-coreevent">
 					{this.state.events
 						&& this.state.events.items
 						.filter((e) => e.title.toUpperCase() === this.state.coreEventTitle)

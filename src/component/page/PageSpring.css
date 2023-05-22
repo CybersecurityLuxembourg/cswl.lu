@@ -2,3 +2,15 @@
 .PageSpring .PageSpring-section {
 	padding: 60px 0px 20px 0px;
 }
+
+.PageSpring .PageSpring-coreevent {
+	display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+
+@media screen and (min-width: 980px) {
+	.PageSpring .PageSpring-coreevent article.Event {
+		width: 50%;
+	}
+}
