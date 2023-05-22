@@ -3015,3 +3015,8 @@ p {
   padding-bottom: .1em !important;
   line-height: 1.8;
 }
+
+article .image img {
+  width: 80% !important;
+  margin: auto;
+}
