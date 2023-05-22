@@ -15,7 +15,7 @@ export default class Event extends Component {
 	}
 
 	render() {
-		return <article>
+		return <article className="Event">
 			<header>
 				<span className="date">
 					{dateToString(this.props.info.start_date, "DD MMM YYYY HH:mm")}

@@ -15,6 +15,7 @@ export default class PageAutumn extends React.Component {
 
 		this.state = {
 			events: null,
+			coreEventTitle: "HACK.LU",
 		};
 	}
 
@@ -61,7 +62,9 @@ export default class PageAutumn extends React.Component {
 	getContent() {
 		const content = [];
 
-		this.state.events.items.map((e) => {
+		this.state.events.items
+			.filter((e) => e.title.toUpperCase() !== this.state.coreEventTitle)
+			.map((e) => {
 			content.push(
 				<Event
 					info={e}
@@ -83,6 +86,20 @@ export default class PageAutumn extends React.Component {
 	render() {
 		return (
 			<div id={"main"} className="PageAutumn light-fade-in-effect">
+				<h2>Core event</h2>
+
+				<section>
+					{this.state.events
+						&& this.state.events.items
+						.filter((e) => e.title.toUpperCase() === this.state.coreEventTitle)
+						.map((e) => {
+							return <Event
+								info={e}
+							/>
+						}
+					)}
+				</section>
+
 				<h2>Agenda</h2>
 
 				<section className="posts">
