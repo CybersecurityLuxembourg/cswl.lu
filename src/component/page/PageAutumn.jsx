@@ -40,7 +40,6 @@ export default class PageAutumn extends React.Component {
 
 			if (tv.length > 0) {
 				const params = {
-					entities: this.props.lhc.id,
 					type: "EVENT",
 					taxonomy_values: tv.map((t) => t.id),
 					page: page || 1
