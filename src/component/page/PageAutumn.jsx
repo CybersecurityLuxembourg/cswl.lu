@@ -72,7 +72,7 @@ export default class PageAutumn extends React.Component {
 			);
 		})
 
-		content.splice(1, 0, <article>
+		content.push(<article>
 			<BoxAddYourEvent/>
 		</article>);
 
