@@ -1,0 +1,70 @@
+
+.ShadowBox {
+	position: relative;
+	padding: 12px;
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.ShadowBox-content {
+	background-color: #232021;
+	padding: 30px 20px;
+}
+
+.shadow-section a {
+	text-decoration: none;
+}
+
+.shadow-section h3 {
+	color: white;
+	font-size: 35px !important;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.shadow-section:hover h3 {
+	font-size: 40px !important;
+	margin-bottom: 0px !important;
+}
+
+.shadow-section h4 {
+	color: white;
+	font-size: 16px !important;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.shadow-section:hover h4 {
+	font-size: 18px !important;
+}
+
+
+.shadow-section div i {
+	color: white;
+	margin: 8px 0px;
+	font-size: 100px;
+	-webkit-transition: font-size .5s ease;
+	-moz-transition: font-size .5s ease;
+	-o-transition: font-size .5s ease;
+	transition: font-size .5s ease;
+}
+
+.shadow-section:hover i {
+	font-size: 140px;
+}
+
+.shadow-section div div {
+	-webkit-transition: opacity .5s ease;
+	-moz-transition: opacity .5s ease;
+	-o-transition: opacity .5s ease;
+	transition: opacity .5s ease;
+}
+
+.shadow-section:hover div div {
+	opacity: 0;
+}

@@ -12,7 +12,7 @@
     "react-notifications": "^1.6.0",
     "react-router-dom": "^5.2.0",
     "react-select": "^3.2.0",
-    "reactjs-popup": "^2.0.4"
+    "reactjs-popup": "2.0.4"
   },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
