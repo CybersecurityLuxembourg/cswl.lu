@@ -390,7 +390,7 @@ export default class PageGala extends React.Component {
 						trigger={
 							<div ref={this.ref5}>
 								<ShadowBox
-									title={"Cybersecurity Startup of the Year"}
+									title={"Cybersecurity Startup Award 2023"}
 									icon={"fa fa-rocket"}
 								/>
 							</div>
