@@ -3020,3 +3020,9 @@ article .image img {
   width: 80% !important;
   margin: auto;
 }
+
+.close-button {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}

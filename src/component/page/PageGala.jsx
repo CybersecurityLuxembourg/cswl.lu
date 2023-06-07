@@ -147,6 +147,12 @@ export default class PageGala extends React.Component {
 					>
 						{(close) => (
 							<div>
+								<button
+									className="close-button"
+									onClick={() => close()}>
+									<i className="fa fa-times"/>
+								</button>
+
 								<h2>CISO of the Year</h2>
 
 								<h3>The purpose of the Award</h3>
@@ -208,6 +214,13 @@ export default class PageGala extends React.Component {
 									<li>The winner will be announced at the Gala & Awards
 									Night on <b>19 OCTOBER 2023</b>.</li>
 								</ul>
+
+								<button
+									onClick={() => window.open(
+										"https://community.cybersecurity.lu/form?tab=4",
+										"_blank")}>
+									Apply now
+								</button>
 							</div>
 						)}
 					</Popup>
@@ -218,7 +231,7 @@ export default class PageGala extends React.Component {
 								<ShadowBox
 									className="CyberWeekTheAwards-ShadowBox-award-inhouse"
 									title={"DPO of the Year"}
-									icon={"fa fa-shield"}
+									icon={"fa fa-lock"}
 								/>
 							</div>
 						}
@@ -226,6 +239,12 @@ export default class PageGala extends React.Component {
 					>
 						{(close) => (
 							<div>
+								<button
+									className="close-button"
+									onClick={() => close()}>
+									<i className="fa fa-times"/>
+								</button>
+
 								<h2>DPO of the Year</h2>
 
 								<h3>The purpose of the Award</h3>
@@ -288,6 +307,13 @@ export default class PageGala extends React.Component {
 									<li>The winner will be announced at the Gala & Awards
 									Night on <b>19 OCTOBER 2023</b>.</li>
 								</ul>
+
+								<button
+									onClick={() => window.open(
+										"https://community.cybersecurity.lu/form?tab=3",
+										"_blank")}>
+									Apply now
+								</button>
 							</div>
 						)}
 					</Popup>
@@ -306,13 +332,25 @@ export default class PageGala extends React.Component {
 					>
 						{(close) => (
 							<div>
+								<button
+									className="close-button"
+									onClick={() => close()}>
+									<i className="fa fa-times"/>
+								</button>
+
 								<h2>Young Talent of the Year</h2>
 
 								<p>The Award will recognize the members of the national
 								team, who participated in the European Cybersecurity
 								Challenge (24-27 October 2023 in Hamar, Norway).</p>
 
-								<p>More about the selection of the national team here.</p>
+								<p>More about the selection of the national team <a
+									href="https://lcsc.lu/"
+									target="_blank"
+									rel="noreferrer">
+									here.
+									</a>
+								</p>
 							</div>
 						)}
 					</Popup>
@@ -331,6 +369,12 @@ export default class PageGala extends React.Component {
 					>
 						{(close) => (
 							<div>
+								<button
+									className="close-button"
+									onClick={() => close()}>
+									<i className="fa fa-times"/>
+								</button>
+
 								<h2>Best Paper @hack.lu 2023</h2>
 
 								<p>The Award will recognize the commitment and
@@ -354,6 +398,12 @@ export default class PageGala extends React.Component {
 					>
 						{(close) => (
 							<div>
+								<button
+									className="close-button"
+									onClick={() => close()}>
+									<i className="fa fa-times"/>
+								</button>
+
 								<h2>Cybersecurity Startup Award 2023</h2>
 
 								<p>Stay tuned… Details to be announced soon with
