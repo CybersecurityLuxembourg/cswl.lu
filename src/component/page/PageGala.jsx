@@ -134,16 +134,15 @@ export default class PageGala extends React.Component {
 
 				<div className="awards">
 					<Popup
-						className={"Popup-small-size"}
 						trigger={
 							<div ref={this.ref1}>
 								<ShadowBox
-									className="CyberWeekTheAwards-ShadowBox-award-inhouse"
 									title={"CISO of the Year"}
 									icon={"fa fa-shield"}
 								/>
 							</div>
 						}
+						modal
 					>
 						{(close) => (
 							<div>
@@ -225,11 +224,9 @@ export default class PageGala extends React.Component {
 						)}
 					</Popup>
 					<Popup
-						className={"Popup-small-size"}
 						trigger={
 							<div ref={this.ref2}>
 								<ShadowBox
-									className="CyberWeekTheAwards-ShadowBox-award-inhouse"
 									title={"DPO of the Year"}
 									icon={"fa fa-lock"}
 								/>
@@ -318,11 +315,9 @@ export default class PageGala extends React.Component {
 						)}
 					</Popup>
 					<Popup
-						className={"Popup-small-size"}
 						trigger={
 							<div ref={this.ref3}>
 								<ShadowBox
-									className="CyberWeekTheAwards-ShadowBox-award-inhouse"
 									title={"Young Talent of the Year"}
 									icon={"fa fa-trophy"}
 								/>
@@ -355,11 +350,9 @@ export default class PageGala extends React.Component {
 						)}
 					</Popup>
 					<Popup
-						className={"Popup-small-size"}
 						trigger={
 							<div ref={this.ref4}>
 								<ShadowBox
-									className="CyberWeekTheAwards-ShadowBox-award-inhouse"
 									title={"Best Paper @hack.lu 2023"}
 									icon={"fa fa-book"}
 								/>
@@ -384,11 +377,9 @@ export default class PageGala extends React.Component {
 						)}
 					</Popup>
 					<Popup
-						className={"Popup-small-size"}
 						trigger={
 							<div ref={this.ref5}>
 								<ShadowBox
-									className="CyberWeekTheAwards-ShadowBox-award-inhouse"
 									title={"Cybersecurity Startup of the Year"}
 									icon={"fa fa-rocket"}
 								/>

@@ -10,6 +10,7 @@
 .ShadowBox-content {
 	background-color: #232021;
 	padding: 30px 20px;
+	cursor: pointer;
 }
 
 .shadow-section a {
