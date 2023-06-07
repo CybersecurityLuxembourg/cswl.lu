@@ -177,7 +177,7 @@ export default class PageGala extends React.Component {
 
 								<h3>Who can apply?</h3>
 
-								<p>The Award is not only intended to candidates having the
+								<p>The Award is not only intended for candidates having the
 								CISO function, but any other information security lead with
 								a similar role as a CISO’s. Of course, CISO-on-demand and
 								ISO are more than welcome to apply.</p>
@@ -198,7 +198,7 @@ export default class PageGala extends React.Component {
 								<h3>How to apply?</h3>
 
 								<ul>
-									<li>Take your chance by filling in this form and add
+									<li>Take your chance by filling in the form below and add
 									your most recent CV.</li>
 									<li>In a second step, you will be sent a
 									questionnaire. The questionnaire will invite you to
@@ -267,10 +267,11 @@ export default class PageGala extends React.Component {
 
 								<h3>Who can apply?</h3>
 
-								<p>The Award is not only intended to candidates having the CISO
-								function, but any other information security lead with a
-								similar role as a CISO’s. Of course, CISO-on-demand
-								and ISO are more than welcome to apply.</p>
+								<p>The DPO Award is intended not only for the candidates
+								having the official DPO function, but also for any other
+								data protection and privacy responsible within an organisation
+								of whatever size. It comes without saying that DPO-on-demand
+								are also welcome to apply.</p>
 
 								<h3>Why apply?</h3>
 
@@ -289,8 +290,8 @@ export default class PageGala extends React.Component {
 								<h3>How to apply?</h3>
 
 								<ul>
-									<li>Take your chance by filling in this
-									form and add your most recent CV.</li>
+									<li>Take your chance by filling in the form below
+									and add your most recent CV.</li>
 									<li>In a second step, you will be sent a
 									questionnaire. The questionnaire will invite
 									you to share your vision and thoughts on
@@ -373,6 +374,15 @@ export default class PageGala extends React.Component {
 								<p>The Award will recognize the commitment and
 								contribution to the whole information
 								security community.</p>
+
+								<p>The paper will be selected amongst the papers
+								presented at hack.lu 2023. More details about the
+								Call for Papers <a
+									href="https://pretalx.com/hack-lu-2023/cfp"
+									target="_blank"
+									rel="noreferrer">
+									here
+									</a>.</p>
 							</div>
 						)}
 					</Popup>
