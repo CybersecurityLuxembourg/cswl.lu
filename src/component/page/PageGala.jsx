@@ -200,7 +200,7 @@ export default class PageGala extends React.Component {
 								<ul>
 									<li>Take your chance by filling in this form and add
 									your most recent CV.</li>
-									<li>2In a second step, you will be sent a
+									<li>In a second step, you will be sent a
 									questionnaire. The questionnaire will invite you to
 									share your vision and thoughts on information security
 									in the current context as well as to present your greatest
