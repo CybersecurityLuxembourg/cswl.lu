@@ -106,28 +106,6 @@ export default class PagePartners extends React.Component {
 	render() {
 		return (
 			<div id={"main"} className="PagePartners light-fade-in-effect">
-				<h2>Spring edition partners</h2>
-
-				<section className="posts">
-					{this.state.springPartners
-						&& this.getContent(this.state.springPartners)
-					}
-				</section>
-
-				{!this.state.springPartners
-					&& <Loading
-						height={400}
-					/>
-				}
-
-				{this.state.springPartners
-					&& this.state.springPartners.length === 0
-					&& <Message
-						text={"No partner found"}
-						height={400}
-					/>
-				}
-
 				<h2>Autumn edition partners</h2>
 
 				<section className="posts">
@@ -144,6 +122,27 @@ export default class PagePartners extends React.Component {
 
 				{this.state.autumnPartners
 					&& this.state.autumnPartners.length === 0
+					&& <Message
+						text={"No partner found"}
+						height={400}
+					/>
+				}
+				<h2>Spring edition partners</h2>
+
+				<section className="posts">
+					{this.state.springPartners
+						&& this.getContent(this.state.springPartners)
+					}
+				</section>
+
+				{!this.state.springPartners
+					&& <Loading
+						height={400}
+					/>
+				}
+
+				{this.state.springPartners
+					&& this.state.springPartners.length === 0
 					&& <Message
 						text={"No partner found"}
 						height={400}
