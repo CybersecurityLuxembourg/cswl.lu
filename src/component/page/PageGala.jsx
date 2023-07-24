@@ -198,14 +198,11 @@ export default class PageGala extends React.Component {
 								<h3>How to apply?</h3>
 
 								<ul>
-									<li>Take your chance by filling in the form below and add
-									your most recent CV.</li>
-									<li>In a second step, you will be sent a
-									questionnaire. The questionnaire will invite you to
-									share your vision and thoughts on information security
-									in the current context as well as to present your greatest
-									achievement(s) and/or challenging project(s) you have
-									worked on.</li>
+									<li>Take your chance by filling in the form below and add your
+									most recent CV by 29 September 2023. The questionnaire invites
+									you to share your vision and thoughts on information security in
+									the current context as well as to present your greatest
+									achievement(s) and/or challenging project(s) you have worked on.</li>
 									<li>A jury (to be announced soon) will select the participants
 									who will proceed to the next stage: the interview with the
 									jury. Selected candidates will be invited to present their
@@ -216,7 +213,7 @@ export default class PageGala extends React.Component {
 
 								<button
 									onClick={() => window.open(
-										"https://community.cybersecurity.lu/form?tab=4",
+										"https://community.cybersecurity.lu/form?tab=5",
 										"_blank")}>
 									Apply now
 								</button>
@@ -290,14 +287,11 @@ export default class PageGala extends React.Component {
 								<h3>How to apply?</h3>
 
 								<ul>
-									<li>Take your chance by filling in the form below
-									and add your most recent CV.</li>
-									<li>In a second step, you will be sent a
-									questionnaire. The questionnaire will invite
-									you to share your vision and thoughts on
-									information security in the current context
-									as well as to present your greatest achievement(s) and/or
-									challenging project(s) you have worked on.</li>
+									<li>Take your chance by filling in the form below and add your
+									most recent CV by 29 September 2023. The questionnaire invites
+									you to share your vision and thoughts on data privacy in the
+									current context as well as to present your greatest achievement(s)
+									and/or challenging project(s) you have worked on.</li>
 									<li>A jury (to be announced soon) will select the
 									participants who will proceed to the next stage: the
 									interview with the jury. Selected candidates will be
@@ -308,7 +302,7 @@ export default class PageGala extends React.Component {
 
 								<button
 									onClick={() => window.open(
-										"https://community.cybersecurity.lu/form?tab=3",
+										"https://community.cybersecurity.lu/form?tab=6",
 										"_blank")}>
 									Apply now
 								</button>
