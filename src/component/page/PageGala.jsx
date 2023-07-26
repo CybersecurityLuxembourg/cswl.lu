@@ -399,10 +399,28 @@ export default class PageGala extends React.Component {
 									<i className="fa fa-times"/>
 								</button>
 
-								<h2>Cybersecurity Startup Award 2023</h2>
+								<div className="row">
+									<div className="col-md-12">
+										<h2>Cybersecurity Startup Award 2023</h2>
+									</div>
 
-								<p>Stay tuned… Details to be announced soon with
-								exciting opportunities!</p>
+									<div className="col-md-12">
+										<h4>Calling all startups operating in Cybersecurity</h4>
+
+										<p>Apply now, and before 14 August 2023, to <a
+											href="https://www.startupluxembourg.com/fit-4-start"
+											target="_blank"
+											rel="noreferrer">Fit4Start
+										</a>, the
+										Luxembourg’s leading startup accelerator programme in
+										order to get a chance to be selected for the Cybersecurity
+										Startup Award 2023.</p>
+
+										<p>Stay tuned, more details to be unveiled very soon…!</p>
+									</div>
+								</div>
+
+								
 							</div>
 						)}
 					</Popup>
