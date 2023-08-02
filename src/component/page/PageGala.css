@@ -33,3 +33,14 @@
 .PageGala .cisos-and-dpos a {
 	margin-right: 8px;
 }
+
+.PageGala .cisos-and-dpos table img {
+	border-radius: 100%;
+	width: 80%;
+	max-width: 200px;
+}
+.PageGala .cisos-and-dpos table tr th,
+.PageGala .cisos-and-dpos table tr td {
+	min-width: 100px;
+	vertical-align: middle;
+}

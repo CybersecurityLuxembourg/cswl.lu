@@ -3026,3 +3026,7 @@ article .image img {
   top: 25px;
   right: 20px;
 }
+
+.centered {
+  text-align: center;
+}
