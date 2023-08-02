@@ -425,6 +425,84 @@ export default class PageGala extends React.Component {
 						)}
 					</Popup>
 				</div>
+
+				<h2>Past editions</h2>
+
+				<p>Rediscover the winners from previous years!</p>
+
+				<div className="cisos-and-dpos">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Year</th>
+								<th>CISOs of the Year</th>
+								<th>DPOs of the Year</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2022</td>
+								<td>
+									Guy Isler<br/>
+									<a href="https://www.linkedin.com/in/guy-isler-21184875/"><i class="fa fa-linkedin"/></a>
+									<a href="https://peertube.securitymadein.lu/w/fvMgd2C1cVKxThrpxedAVA"><i class="fa fa-play-circle"/></a>
+								</td>
+								<td>
+									Maximilien Spielmann<br/>
+									<a href="https://www.linkedin.com/in/max-spielmann-369963269/"><i class="fa fa-linkedin"/></a>
+									<a href="https://peertube.securitymadein.lu/w/vhZkZy7GSG92gPzkDk1Uw2"><i class="fa fa-play-circle"/></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2021</td>
+								<td>
+									Dalia Khader<br/>
+									<a href="https://www.linkedin.com/in/dalia-khader-2b13b6a/"><i class="fa fa-linkedin"/></a>
+									<a href="https://peertube.securitymadein.lu/w/jXVXXgX3TkCUa5j9TpgcQq"><i class="fa fa-play-circle"/></a>
+								</td>
+								<td>
+									Matthieu Gatineau<br/>
+									<a href="https://www.linkedin.com/in/matthieu-gatineau-78ba3611/"><i class="fa fa-linkedin"/></a>
+									<a href="https://peertube.securitymadein.lu/w/wMo5GxPmupHLonZzWHU4ED"><i class="fa fa-play-circle"/></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2020</td>
+								<td>
+									Stephane Bianchin<br/>
+									<a href="https://peertube.securitymadein.lu/w/oPHoWo16WbAyT3WXPfYxzC"><i class="fa fa-play-circle"/></a>
+								</td>
+								<td>
+									Eric Bedell<br/>
+									<a href="https://www.linkedin.com/in/eric-bedell-86916b11/"><i class="fa fa-linkedin"/></a>
+									<a href="https://peertube.securitymadein.lu/w/uEwSJfMM4C1VTLB4EhFHaa"><i class="fa fa-play-circle"/></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2019</td>
+								<td>
+									Jelena Zelenovic Matone<br/>
+									<a href="https://www.linkedin.com/in/jelenazelenovic/"><i class="fa fa-linkedin"/></a>
+									<a href="https://peertube.securitymadein.lu/w/ifxKNoiuDhttnnBfA6CSYh"><i class="fa fa-play-circle"/></a>
+								</td>
+								<td>
+									Stéphane Omnes<br/>
+									<a href="https://www.linkedin.com/in/stephaneomnes/"><i class="fa fa-linkedin"/></a>
+								</td>
+							</tr>
+							<tr>
+								<td>2018</td>
+								<td>Grégory Nou</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>2017</td>
+								<td>Maria Dolores Perez</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		);
 	}

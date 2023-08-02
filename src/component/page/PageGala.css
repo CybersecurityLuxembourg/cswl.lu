@@ -25,3 +25,11 @@
 .PageGala .awards > div {
 	flex: 50%;
 }
+
+.PageGala .cisos-and-dpos {
+	border-top: none !important;
+}
+
+.PageGala .cisos-and-dpos a {
+	margin-right: 8px;
+}
