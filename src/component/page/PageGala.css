@@ -47,7 +47,7 @@
 
 .PageGala .cisos-and-dpos table tr td:first-child,
 .PageGala .cisos-and-dpos table tr th {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .PageGala .cisos-and-dpos table tr td {
@@ -55,8 +55,8 @@
 	vertical-align: middle;
 }
 
-.PageGala .cisos-and-dpos table tr td:last-child,
-.PageGala .cisos-and-dpos table tr th:last-child {
+.PageGala .cisos-and-dpos table tr td:not(:first-child),
+.PageGala .cisos-and-dpos table tr th:not(:first-child) {
 	border-left: solid 2px #eee;
 }
 
