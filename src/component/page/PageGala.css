@@ -60,11 +60,11 @@
 	border-left: solid 2px #eee;
 }
 
-.PageGala a:has(.fa-linkedin) {
+.PageGala a.linkedin-link {
 	margin-left: 8px;
 }
 
-.PageGala a:has(img) {
+.PageGala .cisos-and-dpos a {
 	text-decoration: none;
 	border: none;
 	height: 50px !important;
