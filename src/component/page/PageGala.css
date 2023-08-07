@@ -34,7 +34,7 @@
 	margin-right: 8px;
 }
 
-.PageGala .cisos-and-dpos table img {
+.PageGala .cisos-and-dpos table img.profile {
 	border-radius: 100%;
 	width: 80%;
 	max-width: 200px;
@@ -43,4 +43,35 @@
 .PageGala .cisos-and-dpos table tr td {
 	min-width: 100px;
 	vertical-align: middle;
+}
+
+.PageGala .cisos-and-dpos table tr td:first-child,
+.PageGala .cisos-and-dpos table tr th {
+	font-size: 16px;
+}
+
+.PageGala .cisos-and-dpos table tr td {
+	min-width: 100px;
+	vertical-align: middle;
+}
+
+.PageGala .cisos-and-dpos table tr td:last-child,
+.PageGala .cisos-and-dpos table tr th:last-child {
+	border-left: solid 2px #eee;
+}
+
+.PageGala a:has(.fa-linkedin) {
+	margin-left: 8px;
+}
+
+.PageGala a:has(img) {
+	text-decoration: none;
+	border: none;
+	height: 50px !important;
+}
+
+
+.PageGala a img {
+	max-height: 30px;
+	max-width: 100%;
 }

@@ -442,53 +442,64 @@ export default class PageGala extends React.Component {
 						<tbody>
 							<tr>
 								<td>2022</td>
-								<td className="centered">
-									<img src="/img/guy_isler_award.jpg"/><br/>
-									Guy Isler<br/>
+								<td>
+									<div className="centered">
+										<img className="profile" src="/img/guy_isler_award.jpg"/>
+									</div>
+									Guy Isler
 									<a href="https://www.linkedin.com/in/guy-isler-21184875/"><i class="fa fa-linkedin"/></a>
-									<a href="https://peertube.securitymadein.lu/w/fvMgd2C1cVKxThrpxedAVA"><i class="fa fa-play-circle"/></a>
+									<br/>
+									<a href="https://peertube.securitymadein.lu/w/fvMgd2C1cVKxThrpxedAVA"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
 								</td>
-								<td className="centered">
-									<img src="/img/maximilien_spielmann_award.jpg"/><br/>
-									Maximilien Spielmann<br/>
+								<td>
+									<div className="centered">
+										<img className="profile" src="/img/maximilien_spielmann_award.jpg"/>
+									</div>
+									Maximilien Spielmann
 									<a href="https://www.linkedin.com/in/max-spielmann-369963269/"><i class="fa fa-linkedin"/></a>
-									<a href="https://peertube.securitymadein.lu/w/vhZkZy7GSG92gPzkDk1Uw2"><i class="fa fa-play-circle"/></a>
+									<br/>
+									<a href="https://peertube.securitymadein.lu/w/vhZkZy7GSG92gPzkDk1Uw2"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
 								</td>
 							</tr>
 							<tr>
 								<td>2021</td>
 								<td>
-									Dalia Khader<br/>
+									Dalia Khader
 									<a href="https://www.linkedin.com/in/dalia-khader-2b13b6a/"><i class="fa fa-linkedin"/></a>
-									<a href="https://peertube.securitymadein.lu/w/jXVXXgX3TkCUa5j9TpgcQq"><i class="fa fa-play-circle"/></a>
+									<br/>
+									<a href="https://peertube.securitymadein.lu/w/jXVXXgX3TkCUa5j9TpgcQq"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
-									Matthieu Gatineau<br/>
+									Matthieu Gatineau
 									<a href="https://www.linkedin.com/in/matthieu-gatineau-78ba3611/"><i class="fa fa-linkedin"/></a>
-									<a href="https://peertube.securitymadein.lu/w/wMo5GxPmupHLonZzWHU4ED"><i class="fa fa-play-circle"/></a>
+									<br/>
+									<a href="https://peertube.securitymadein.lu/w/wMo5GxPmupHLonZzWHU4ED"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
 								</td>
 							</tr>
 							<tr>
 								<td>2020</td>
 								<td>
-									Stephane Bianchin<br/>
-									<a href="https://peertube.securitymadein.lu/w/oPHoWo16WbAyT3WXPfYxzC"><i class="fa fa-play-circle"/></a>
+									Stephane Bianchin
+									<br/>
+									<a href="https://peertube.securitymadein.lu/w/oPHoWo16WbAyT3WXPfYxzC"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
-									Eric Bedell<br/>
+									Eric Bedell
 									<a href="https://www.linkedin.com/in/eric-bedell-86916b11/"><i class="fa fa-linkedin"/></a>
-									<a href="https://peertube.securitymadein.lu/w/uEwSJfMM4C1VTLB4EhFHaa"><i class="fa fa-play-circle"/></a>
+									<br/>
+									<a href="https://peertube.securitymadein.lu/w/uEwSJfMM4C1VTLB4EhFHaa"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
 								</td>
 							</tr>
 							<tr>
 								<td>2019</td>
 								<td>
-									Jelena Zelenovic Matone<br/>
+									Jelena Zelenovic Matone
 									<a href="https://www.linkedin.com/in/jelenazelenovic/"><i class="fa fa-linkedin"/></a>
-									<a href="https://peertube.securitymadein.lu/w/ifxKNoiuDhttnnBfA6CSYh"><i class="fa fa-play-circle"/></a>
+									<br/>
+									<a href="https://peertube.securitymadein.lu/w/ifxKNoiuDhttnnBfA6CSYh"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
-									Stéphane Omnes<br/>
+									Stéphane Omnes
 									<a href="https://www.linkedin.com/in/stephaneomnes/"><i class="fa fa-linkedin"/></a>
 								</td>
 							</tr>
