@@ -145,7 +145,7 @@ export default class PageGala extends React.Component {
 						</div>
 					</div>
 					<div>
-						<p className="centered">Next to the annual awards celebration, you can expect a
+						<p>Next to the annual awards celebration, you can expect a
 						surprising show from the iPad magician Christoph Wilde followed
 						by a walking dinner. A live-performance group will give the
 						rhythm of the rest of the night - adding an extra touch of
