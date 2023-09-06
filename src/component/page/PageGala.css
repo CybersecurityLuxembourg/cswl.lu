@@ -75,3 +75,20 @@
 	max-height: 30px;
 	max-width: 100%;
 }
+
+.PageGala .photo-magicien {
+	position: relative;
+	border: none !important;
+	width: 100%;
+	text-align: center;
+	padding-top: 24px !important;
+	padding-bottom: 24px !important;
+}
+
+.PageGala .photo-magicien img {
+	object-fit: cover;
+  	border-radius: 50%;
+  	width: 300px;
+  	max-width: 100%;
+  	height: auto;
+}

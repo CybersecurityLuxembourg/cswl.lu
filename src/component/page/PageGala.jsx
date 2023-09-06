@@ -125,10 +125,30 @@ export default class PageGala extends React.Component {
 					</div>
 				</div>
 
-				<p>The Awards & Gala Night is the flagship and closing event
-				of the Cybersecurity Week Luxembourg that brings together the
-				cybersecurity community and celebrates the most promising
-				cybersecurity talents & professionals.</p>
+				<p>The Awards & Gala Night is the flagship and closing
+				event of the Cybersecurity Week Luxembourg campaign.</p>
+
+				<p>A magical night will unfold!</p>
+
+				<p>The awards are a tribute to remarkable cybersecurity and
+				privacy professionals as well as to the young generation of
+				tomorrow’s experts whose achievements are making a significant
+				impact to creating a safer digital space and ecosystem.</p>
+
+				<p>Next to the annual awards celebration, you can expect a
+				surprising show from the iPad magician Christoph Wilde followed
+				by a walking dinner. A live-performance group will give the
+				rhythm of the rest of the night - adding an extra touch of
+				excitement to the evening!</p>
+
+				<div className="photo-magicien">
+					<img
+						src={"/img/Photo_magicien.jpg"}
+						alt="Photo Christoph Wilde"
+					/>
+				</div>
+
+				<p><b>The event is by invitation only and seats are limited.</b></p>
 
 				<h2>Cybersecurity Awards</h2>
 
