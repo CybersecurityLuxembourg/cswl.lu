@@ -117,7 +117,7 @@ export default class PageGala extends React.Component {
 				<div className="details">
 					<div className="detail">
 						<i className="fa fa-calendar"/>
-						<div>19th October 2023</div>
+						<div>19th October 2023<br/>as of 5:30 PM</div>
 					</div>
 					<div className="detail">
 						<i className="fa fa-map-marker"/>
@@ -125,30 +125,35 @@ export default class PageGala extends React.Component {
 					</div>
 				</div>
 
-				<p>The Awards & Gala Night is the flagship and closing
+				<p className="centered">The Awards & Gala Night is the flagship and closing
 				event of the Cybersecurity Week Luxembourg campaign.</p>
 
-				<p>A magical night will unfold!</p>
+				<p className="centered"><b><i>A magical night will unfold!</i></b></p>
 
-				<p>The awards are a tribute to remarkable cybersecurity and
+				<p className="centered">The awards are a tribute to remarkable cybersecurity and
 				privacy professionals as well as to the young generation of
 				tomorrow’s experts whose achievements are making a significant
 				impact to creating a safer digital space and ecosystem.</p>
 
-				<p>Next to the annual awards celebration, you can expect a
-				surprising show from the iPad magician Christoph Wilde followed
-				by a walking dinner. A live-performance group will give the
-				rhythm of the rest of the night - adding an extra touch of
-				excitement to the evening!</p>
-
-				<div className="photo-magicien">
-					<img
-						src={"/img/Photo_magicien.jpg"}
-						alt="Photo Christoph Wilde"
-					/>
+				<div className="magician-row">
+					<div>
+						<div className="photo-magicien">
+							<img
+								src={"/img/Photo_magicien.jpg"}
+								alt="Photo Christoph Wilde"
+							/>
+						</div>
+					</div>
+					<div>
+						<p className="centered">Next to the annual awards celebration, you can expect a
+						surprising show from the iPad magician Christoph Wilde followed
+						by a walking dinner. A live-performance group will give the
+						rhythm of the rest of the night - adding an extra touch of
+						excitement to the evening!</p>
+					</div>
 				</div>
 
-				<p><b>The event is by invitation only and seats are limited.</b></p>
+				<p className="centered"><b>The event is by invitation only and seats are limited.</b></p>
 
 				<h2>Cybersecurity Awards</h2>
 

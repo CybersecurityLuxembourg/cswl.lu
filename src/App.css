@@ -3011,9 +3011,9 @@ img {
 
 p {
   border: none !important;
-  padding-top: .4em !important;
+  padding-top: .2em !important;
   padding-bottom: .1em !important;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 article .image img {

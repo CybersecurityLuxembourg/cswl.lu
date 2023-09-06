@@ -76,6 +76,19 @@
 	max-width: 100%;
 }
 
+.PageGala .magician-row {
+	display: flex;
+	flex-wrap: wrap;
+	border: none !important;
+	align-items: center;
+	padding: 1rem 4rem 2rem 4rem !important;
+}
+
+.PageGala .magician-row > div {
+	flex: 50%;
+	align-items: center;
+}
+
 .PageGala .photo-magicien {
 	position: relative;
 	border: none !important;
@@ -88,7 +101,14 @@
 .PageGala .photo-magicien img {
 	object-fit: cover;
   	border-radius: 50%;
-  	width: 300px;
+  	width: 200px;
   	max-width: 100%;
   	height: auto;
+}
+
+@media screen and (max-width: 980px) {
+	.PageGala .magician-row > div {
+		flex: 0 0 100% !important;
+		flex-direction: column;
+	}
 }
