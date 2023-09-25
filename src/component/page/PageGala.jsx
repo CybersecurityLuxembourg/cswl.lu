@@ -140,13 +140,13 @@ export default class PageGala extends React.Component {
 						<div className="photo-magicien">
 							<img
 								src={"/img/Photo_magicien.jpg"}
-								alt="Photo Christoph Wilde"
+								alt="Photo Christoph Wilke"
 							/>
 						</div>
 					</div>
 					<div>
 						<p>Next to the annual awards celebration, you can expect a
-						surprising show from the iPad magician Christoph Wilde followed
+						surprising show from the iPad magician Christoph Wilke followed
 						by a walking dinner. A live-performance group will give the
 						rhythm of the rest of the night - adding an extra touch of
 						excitement to the evening!</p>
