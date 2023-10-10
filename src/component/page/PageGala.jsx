@@ -239,8 +239,9 @@ export default class PageGala extends React.Component {
 								<button
 									onClick={() => window.open(
 										"https://community.cybersecurity.lu/form?tab=5",
-										"_blank")}>
-									Apply now
+										"_blank")}
+									disabled={true}>
+									Applications are now closed
 								</button>
 							</div>
 						)}
@@ -328,8 +329,9 @@ export default class PageGala extends React.Component {
 								<button
 									onClick={() => window.open(
 										"https://community.cybersecurity.lu/form?tab=6",
-										"_blank")}>
-									Apply now
+										"_blank")}
+									disabled={true}>
+									Applications are now closed
 								</button>
 							</div>
 						)}
