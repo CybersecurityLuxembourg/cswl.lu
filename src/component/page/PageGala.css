@@ -1,27 +1,4 @@
 
-.PageGala .details {
-	display: flex;
-}
-
-.PageGala .detail {
-	padding: 60px 20px 30px 20px;
-	border: none !important;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	flex: 50%;
-}
-
-.PageGala .detail i {
-	font-size: 68px;
-	margin-bottom: 8px;
-}
-
-.PageGala .awards {
-	display: flex;
-	flex-wrap: wrap;
-}
-
 .PageGala .awards > div {
 	flex: 50%;
 }
