@@ -112,3 +112,20 @@
 		flex-direction: column;
 	}
 }
+
+.PageGala .carousel,
+.PageGala .slider-wrapper,
+.PageGala .slider {
+	aspect-ratio: 16 / 10;
+	background-color: black;
+}
+
+.PageGala .carousel button {
+	height: 100%;
+}
+
+.PageGala .carousel .slide,
+.PageGala .carousel .slide img {
+	height: 100%;
+	width: auto;
+}

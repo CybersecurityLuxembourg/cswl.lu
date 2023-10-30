@@ -1,5 +1,6 @@
 import React from "react";
 import "./PageGala.css";
+import { Carousel } from "react-responsive-carousel";
 import Popup from "reactjs-popup";
 import { NotificationManager as nm } from "react-notifications";
 import { Link } from "react-router-dom";
@@ -11,7 +12,7 @@ import { dictToURI } from "../../utils/url.jsx";
 import { getPrivateAppURL } from "../../utils/env.jsx";
 import Entity from "../item/Entity.jsx";
 import ShadowBox from "../box/ShadowBox.jsx";
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 export default class PageGala extends React.Component {
@@ -154,6 +155,31 @@ export default class PageGala extends React.Component {
 				</div>
 
 				<p className="centered"><b>The event is by invitation only and seats are limited.</b></p>
+
+				<h2>CSWL 2023 album</h2>
+
+				<Carousel
+					dynamicHeight={false}
+					showStatus={false}
+					showThumbs={false}
+					infiniteLoop={true}
+					autoPlay={true}
+					interval={5000}
+				>
+					<img src="/img/CSWL_2023_pict-1.jpg"/>
+					<img src="/img/CSWL_2023_pict-2.jpg"/>
+					<img src="/img/CSWL_2023_pict-3.jpg"/>
+					<img src="/img/CSWL_2023_pict-4.jpg"/>
+					<img src="/img/CSWL_2023_pict-5.jpg"/>
+					<img src="/img/CSWL_2023_pict-6.jpg"/>
+					<img src="/img/CSWL_2023_pict-7.jpg"/>
+					<img src="/img/CSWL_2023_pict-8.jpg"/>
+					<img src="/img/CSWL_2023_pict-9.jpg"/>
+					<img src="/img/CSWL_2023_pict-10.jpg"/>
+					<img src="/img/CSWL_2023_pict-11.jpg"/>
+					<img src="/img/CSWL_2023_pict-12.jpg"/>
+					<img src="/img/CSWL_2023_pict-13.jpg"/>
+				</Carousel>
 
 				<h2>Past editions</h2>
 
