@@ -174,18 +174,12 @@ export default class PageGala extends React.Component {
 							<tr>
 								<td><b>2022</b></td>
 								<td>
-									<div>
-										<img className="profile" src="/img/guy_isler_award.jpg"/>
-									</div>
 									Guy Isler
 									<a className="linkedin-link" href="https://www.linkedin.com/in/guy-isler-21184875/"><i class="fa fa-linkedin"/></a>
 									<br/>
 									<a href="https://peertube.securitymadein.lu/w/fvMgd2C1cVKxThrpxedAVA"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
-									<div>
-										<img className="profile" src="/img/maximilien_spielmann_award.jpg"/>
-									</div>
 									Maximilien Spielmann
 									<a className="linkedin-link" href="https://www.linkedin.com/in/max-spielmann-369963269/"><i class="fa fa-linkedin"/></a>
 									<br/>
