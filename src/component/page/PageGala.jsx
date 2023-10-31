@@ -126,18 +126,18 @@ export default class PageGala extends React.Component {
 					interval={5000}
 				>
 					<img src="/img/CSWL_2023_pict-11.jpg"/>
-					<img src="/img/CSWL_2023_pict-1.jpg"/>
-					<img src="/img/CSWL_2023_pict-2.jpg"/>
-					<img src="/img/CSWL_2023_pict-3.jpg"/>
-					<img src="/img/CSWL_2023_pict-4.jpg"/>
 					<img src="/img/CSWL_2023_pict-5.jpg"/>
-					<img src="/img/CSWL_2023_pict-6.jpg"/>
-					<img src="/img/CSWL_2023_pict-7.jpg"/>
-					<img src="/img/CSWL_2023_pict-8.jpg"/>
+					<img src="/img/CSWL_2023_pict-4.jpg"/>
 					<img src="/img/CSWL_2023_pict-9.jpg"/>
 					<img src="/img/CSWL_2023_pict-10.jpg"/>
 					<img src="/img/CSWL_2023_pict-12.jpg"/>
+					<img src="/img/CSWL_2023_pict-6.jpg"/>
+					<img src="/img/CSWL_2023_pict-8.jpg"/>
 					<img src="/img/CSWL_2023_pict-13.jpg"/>
+					<img src="/img/CSWL_2023_pict-1.jpg"/>
+					<img src="/img/CSWL_2023_pict-7.jpg"/>
+					<img src="/img/CSWL_2023_pict-2.jpg"/>
+					<img src="/img/CSWL_2023_pict-3.jpg"/>
 				</Carousel>
 
 				<h2>Past editions</h2>
