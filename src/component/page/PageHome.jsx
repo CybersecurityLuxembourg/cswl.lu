@@ -34,7 +34,7 @@ export default class PageHome extends React.Component {
 			<div id={"main"} className={"PageHome light-fade-in-effect"}>
 				<div className={"description"}>
 					<p>
-						The CYBERSECURITY Week Luxembourg 2023, the national campaign
+						The CYBERSECURITY Week Luxembourg 2024, the national campaign
 						coordinated by the <a
 							href="https://www.lhc.lu"
 							target="_blank"
@@ -53,28 +53,28 @@ export default class PageHome extends React.Component {
 					<div className={"editions-small"}>
 						<div className={"edition-white"}/>
 						<div className={"edition"}>
-							<h3>Spring edition<br/>in June 2023</h3>
+							<h3>Spring edition<br/>in June 2024</h3>
 							<p>Core event:</p>
 							<a
 								href="https://www.ictspring.com/"
 								rel="noreferrer"
 								target="_blank">
-								<img
-									src={"/img/ict_spring_2023.png"}
-									alt="CSWL 2023 Spring light"
+								<img 
+									src={"/img/short_2024_Spring.png"}
+									alt="CSWL 2024 Spring light"
 								/>
 							</a>
 						</div>
 						<div className={"edition"}>
-							<h3>Autumn edition<br/>in October 2023</h3>
+							<h3>Autumn edition<br/>in October 2024</h3>
 							<p>Core event:</p>
 							<a
 								href="https://hack.lu/"
 								rel="noreferrer"
 								target="_blank">
 								<img
-									src={"/img/hack_lu_2023.png"}
-									alt="CSWL 2023 Spring light"
+									src={"/img/short_2024_Autumn.png"}
+									alt="CSWL 2024 Spring light"
 								/>
 							</a>
 						</div>
@@ -98,8 +98,8 @@ export default class PageHome extends React.Component {
 					<div className={"edition"}>
 						<Link to="spring">
 							<img
-								src={"/img/cswl_2023_spring_light.jpg"}
-								alt="CSWL 2023 Spring light"
+								src={"/img/CSWL_2024_Spring_website.png"}
+								alt="CSWL 2024 Spring light"
 							/>
 						</Link>
 					</div>
@@ -107,8 +107,8 @@ export default class PageHome extends React.Component {
 					<div className={"edition"}>
 						<Link to="autumn">
 							<img
-								src={"/img/cswl_2023_autumn_light.jpg"}
-								alt="CSWL 2023 Autumn light"
+								src={"/img/CSWL_2024_Autumn-website.png"}
+								alt="CSWL 2024 Autumn light"
 							/>
 						</Link>
 					</div>
@@ -127,10 +127,9 @@ export default class PageHome extends React.Component {
 
 					<div className={"brand-kit"}>
 						<a
-							href={"https://cloudshare.secin.lu/index.php/s/56iykxe2s7SnGyG"}
+							href={"https://cloudshare.secin.lu/index.php/s/gwY9iYHBWa8ETZ7"}
 							rel="noreferrer"
 							target="_blank"
-							alt="Brand kit"
 						>
 							<i className="fa fa-picture-o"/>
 							<h4>Download the brand kit</h4>
