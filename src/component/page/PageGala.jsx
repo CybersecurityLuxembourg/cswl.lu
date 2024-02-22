@@ -161,14 +161,22 @@ export default class PageGala extends React.Component {
 										<img className="profile" src="/img/franck_bedell_award.png"/>
 									</div>
 									Franck Bedell
-									<a className="linkedin-link" href="https://www.linkedin.com/in/franckbedell/"><i class="fa fa-linkedin"/></a>
+									<a className="linkedin-link" href="https://www.linkedin.com/in/franckbedell/"><i
+										class="fa fa-linkedin"/></a>
+									<br/>
+									<a href="https://open.spotify.com/episode/2neFPrxXGDp2ziDO7EWwsL?si=f085000fbc65489c"><img
+										src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
 									<div>
 										<img className="profile" src="/img/julien_winkin_award.png"/>
 									</div>
 									Julien Winkin
-									<a className="linkedin-link" href="https://www.linkedin.com/in/julienwinkin/"><i class="fa fa-linkedin"/></a>
+									<a className="linkedin-link" href="https://www.linkedin.com/in/julienwinkin/"><i
+										class="fa fa-linkedin"/></a>
+									<br/>
+									<a href="https://open.spotify.com/episode/1xib3kK7re9Mt2rPdg7doV?si=Fbzn3MAVSOWi7UVptqRaX"><img
+										src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 							</tr>
 							<tr>

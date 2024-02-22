@@ -47,39 +47,8 @@ export default class PageHome extends React.Component {
 					</p>
 
 					<p>
-						This year, the CSWL will be divided into 2 key sessions:
+						The CSWL is divided into 2 key sessions.
 					</p>
-
-					<div className={"editions-small"}>
-						<div className={"edition-white"}/>
-						<div className={"edition"}>
-							<h3>Spring edition<br/>in June 2024</h3>
-							<p>Core event:</p>
-							<a
-								href="https://www.ictspring.com/"
-								rel="noreferrer"
-								target="_blank">
-								<img 
-									src={"/img/short_2024_Spring.png"}
-									alt="CSWL 2024 Spring light"
-								/>
-							</a>
-						</div>
-						<div className={"edition"}>
-							<h3>Autumn edition<br/>in October 2024</h3>
-							<p>Core event:</p>
-							<a
-								href="https://hack.lu/"
-								rel="noreferrer"
-								target="_blank">
-								<img
-									src={"/img/short_2024_Autumn.png"}
-									alt="CSWL 2024 Spring light"
-								/>
-							</a>
-						</div>
-						<div className={"edition-white"}/>
-					</div>
 
 					<p>
 						In addition, a series of events will be organised addressing different
@@ -94,24 +63,35 @@ export default class PageHome extends React.Component {
 					</p>
 				</div>
 
-				<div className={"editions"}>
+				<div className={"editions-small"}>
+					<div className={"edition-white"}/>
 					<div className={"edition"}>
-						<Link to="spring">
+						<h3>Spring edition<br/>in June 2024</h3>
+						<p>Core event:</p>
+						<a
+							href="https://www.ictspring.com/"
+							rel="noreferrer"
+							target="_blank">
 							<img
-								src={"/img/CSWL_2024_Spring_website.png"}
+								src={"/img/short_2024_Spring.png"}
 								alt="CSWL 2024 Spring light"
 							/>
-						</Link>
+						</a>
 					</div>
-
 					<div className={"edition"}>
-						<Link to="autumn">
+						<h3>Autumn edition<br/>in October 2024</h3>
+						<p>Core event:</p>
+						<a
+							href="https://hack.lu/"
+							rel="noreferrer"
+							target="_blank">
 							<img
-								src={"/img/CSWL_2024_Autumn-website.png"}
-								alt="CSWL 2024 Autumn light"
+								src={"/img/short_2024_Autumn.png"}
+								alt="CSWL 2024 Spring light"
 							/>
-						</Link>
+						</a>
 					</div>
+					<div className={"edition-white"}/>
 				</div>
 
 				<div className={"editions"}>
