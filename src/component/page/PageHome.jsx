@@ -48,18 +48,6 @@ export default class PageHome extends React.Component {
                     <p>
                         The CSWL is divided into 2 key sessions.
                     </p>
-
-                    <p>
-                        In addition, a series of events will be organised addressing different
-                        types of topics, targeting a wide range of audiences.
-                    </p>
-
-                    <p>
-                        Because joint efforts have greater resonance, the CSWL aims at bringing
-                        together and federating the cybersecurity community, in one hand, and
-                        promoting the hard work put together by this same community following
-                        a common objective of achieving cyber resilience, in the other hand.
-                    </p>
                 </div>
 
                 <div className={"editions-small"}>
@@ -91,6 +79,19 @@ export default class PageHome extends React.Component {
                     </div>
                     <div className={"edition-white"}/>
                 </div>
+                <div className={"description"}>
+                    <p>
+                        In addition, a series of events will be organised addressing different
+                        types of topics, targeting a wide range of audiences.
+                    </p>
+
+                    <p>
+                        Because joint efforts have greater resonance, the CSWL aims at bringing
+                        together and federating the cybersecurity community, in one hand, and
+                        promoting the hard work put together by this same community following
+                        a common objective of achieving cyber resilience, in the other hand.
+                    </p>
+                </div>
                 <div className={"editions-small"}>
                     <div className={"edition-white"}/>
                     <div className={"edition"}>
@@ -106,7 +107,7 @@ export default class PageHome extends React.Component {
                         </a>
                     </div>
                     <div className={"edition"}>
-                        <a
+                    <a
                             href="/autumn"
                             rel="noreferrer"
                             target="_blank">
