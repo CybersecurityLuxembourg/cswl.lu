@@ -37,7 +37,7 @@ export default class PageAutumn extends React.Component {
 		if (this.props.lhc && this.props.analytics) {
 			const tv = this.props.analytics.taxonomy_values
 				.filter((v) => v.category === "EVENT CATEGORY")
-				.filter((v) => v.name === "CSWL 2023 - AUTUMN EDITION");
+				.filter((v) => v.name === "CSWL 2024 - AUTUMN EDITION");
 
 			if (tv.length > 0) {
 				const params = {

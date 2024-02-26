@@ -15,7 +15,7 @@ export default class PageSpring extends React.Component {
 
 		this.state = {
 			events: null,
-			coreEventTitle: "ICT SPRING 2023",
+			coreEventTitle: "ICT SPRING 2024",
 		};
 	}
 
@@ -37,7 +37,7 @@ export default class PageSpring extends React.Component {
 		if (this.props.lhc && this.props.analytics) {
 			const tv = this.props.analytics.taxonomy_values
 				.filter((v) => v.category === "EVENT CATEGORY")
-				.filter((v) => v.name === "CSWL 2023 - SPRING EDITION");
+				.filter((v) => v.name === "CSWL 2024 - SPRING EDITION");
 
 			if (tv.length > 0) {
 				const params = {

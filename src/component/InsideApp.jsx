@@ -13,7 +13,7 @@ import PageSpring from "./page/PageSpring.jsx";
 import PagePartners from "./page/PagePartners.jsx";
 import PageGala from "./page/PageGala.jsx";
 import Page404 from "./page/Page404.jsx";
-import { dictToURI } from "../utils/url.jsx";
+
 
 class InsideApp extends React.Component {
 	constructor(props) {
@@ -60,14 +60,16 @@ class InsideApp extends React.Component {
 		const element = document.getElementById("bg");
 
 		if (location.pathname === "/spring") {
-			element.style.backgroundImage = "url('../img/cswl_2023_spring.png')";
+			element.style.backgroundImage = "url('../img/CSWL_2024_Spring_website.png')";
 		} else if (location.pathname === "/autumn") {
-			element.style.backgroundImage = "url('../img/cswl_2023_autumn.png')";
+			element.style.backgroundImage = "url('../img/CSWL_2024_Autumn-website.png')";
 		} else if (location.pathname === "/gala") {
-			element.style.backgroundImage = "url('../img/cswl_2023_gala.png')";
+			element.style.backgroundImage = "url('../img/CSWL_Socials_GALA_2024LOGO.png')";
 		} else {
-			element.style.backgroundImage = "url('../img/cswl_2023_main.png')";
+			
+			element.style.backgroundImage = "url('../img/CSWL_2024.png ')";
 		}
+		console.log(location.pathname);
 	}
 
 	componentWillUnmount() {
@@ -179,10 +181,10 @@ class InsideApp extends React.Component {
 				</div>
 
 				<div id="bg" className="bg fixed" style={{ transform: "none" }}/>
-				<link rel="preload" as="image" href="/img/cswl_2023_main.png"/>
-				<link rel="preload" as="image" href="/img/cswl_2023_spring.png"/>
-				<link rel="preload" as="image" href="/img/cswl_2023_autumn.png"/>
-				<link rel="preload" as="image" href="/img/cswl_2023_gala.png"/>
+				<link rel="preload" as="image" href="/img/CSWL_2024.png"/>
+				<link rel="preload" as="image" href="/img/CSWL_2024_Spring_website.png"/>
+				<link rel="preload" as="image" href="/img/CSWL_2024_Spring_website.png"/>
+				<link rel="preload" as="image" href="/img/CSWL_Socials_GALA_2024LOGO.png"/>
 				<Footer/>
 			</div>
 		);

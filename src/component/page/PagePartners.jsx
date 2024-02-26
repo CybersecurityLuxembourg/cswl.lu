@@ -40,7 +40,7 @@ export default class PagePartners extends React.Component {
 	getSpringPartners(page) {
 		if (this.props.lhc && this.props.analytics) {
 			const tv = this.props.analytics.taxonomy_values
-				.filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2023")
+				.filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2024")
 				.filter((v) => v.name === "SPRING EDITION PARTNER");
 
 			if (tv.length > 0) {
@@ -64,7 +64,7 @@ export default class PagePartners extends React.Component {
 	getAutumnPartners(page) {
 		if (this.props.lhc && this.props.analytics) {
 			const tv = this.props.analytics.taxonomy_values
-				.filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2023")
+				.filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2024")
 				.filter((v) => v.name === "AUTUMN EDITION PARTNER");
 
 			if (tv.length > 0) {

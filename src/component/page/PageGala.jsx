@@ -49,7 +49,7 @@ export default class PageGala extends React.Component {
 	getSpringPartners(page) {
 		if (this.props.lhc && this.props.analytics) {
 			const tv = this.props.analytics.taxonomy_values
-				.filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2023")
+				.filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2024")
 				.filter((v) => v.name === "SPRING EDITION PARTNER");
 
 			if (tv.length > 0) {
@@ -73,7 +73,7 @@ export default class PageGala extends React.Component {
 	getAutumnPartners(page) {
 		if (this.props.lhc && this.props.analytics) {
 			const tv = this.props.analytics.taxonomy_values
-				.filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2023")
+				.filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2024")
 				.filter((v) => v.name === "AUTUMN EDITION PARTNER");
 
 			if (tv.length > 0) {
@@ -161,14 +161,22 @@ export default class PageGala extends React.Component {
 										<img className="profile" src="/img/franck_bedell_award.png"/>
 									</div>
 									Franck Bedell
-									<a className="linkedin-link" href="https://www.linkedin.com/in/franckbedell/"><i class="fa fa-linkedin"/></a>
+									<a className="linkedin-link" href="https://www.linkedin.com/in/franckbedell/"><i
+										class="fa fa-linkedin"/></a>
+									<br/>
+									<a href="https://open.spotify.com/episode/2neFPrxXGDp2ziDO7EWwsL?si=f085000fbc65489c"><img
+										src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
 									<div>
 										<img className="profile" src="/img/julien_winkin_award.png"/>
 									</div>
 									Julien Winkin
-									<a className="linkedin-link" href="https://www.linkedin.com/in/julienwinkin/"><i class="fa fa-linkedin"/></a>
+									<a className="linkedin-link" href="https://www.linkedin.com/in/julienwinkin/"><i
+										class="fa fa-linkedin"/></a>
+									<br/>
+									<a href="https://open.spotify.com/episode/1xib3kK7re9Mt2rPdg7doV?si=Fbzn3MAVSOWi7UVptqRaX"><img
+										src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 							</tr>
 							<tr>
@@ -177,13 +185,13 @@ export default class PageGala extends React.Component {
 									Guy Isler
 									<a className="linkedin-link" href="https://www.linkedin.com/in/guy-isler-21184875/"><i class="fa fa-linkedin"/></a>
 									<br/>
-									<a href="https://peertube.securitymadein.lu/w/fvMgd2C1cVKxThrpxedAVA"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
+									<a href="https://peertube.securitymadein.lu/w/fvMgd2C1cVKxThrpxedAVA"><img src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
 									Maximilien Spielmann
 									<a className="linkedin-link" href="https://www.linkedin.com/in/max-spielmann-369963269/"><i class="fa fa-linkedin"/></a>
 									<br/>
-									<a href="https://peertube.securitymadein.lu/w/vhZkZy7GSG92gPzkDk1Uw2"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
+									<a href="https://peertube.securitymadein.lu/w/vhZkZy7GSG92gPzkDk1Uw2"><img src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 							</tr>
 							<tr>
@@ -192,13 +200,13 @@ export default class PageGala extends React.Component {
 									Dalia Khader
 									<a className="linkedin-link" href="https://www.linkedin.com/in/dalia-khader-2b13b6a/"><i class="fa fa-linkedin"/></a>
 									<br/>
-									<a href="https://peertube.securitymadein.lu/w/jXVXXgX3TkCUa5j9TpgcQq"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
+									<a href="https://peertube.securitymadein.lu/w/jXVXXgX3TkCUa5j9TpgcQq"><img src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
 									Matthieu Gatineau
 									<a className="linkedin-link" href="https://www.linkedin.com/in/matthieu-gatineau-78ba3611/"><i class="fa fa-linkedin"/></a>
 									<br/>
-									<a href="https://peertube.securitymadein.lu/w/wMo5GxPmupHLonZzWHU4ED"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
+									<a href="https://peertube.securitymadein.lu/w/wMo5GxPmupHLonZzWHU4ED"><img src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 							</tr>
 							<tr>
@@ -206,13 +214,13 @@ export default class PageGala extends React.Component {
 								<td>
 									Stephane Bianchin
 									<br/>
-									<a href="https://peertube.securitymadein.lu/w/oPHoWo16WbAyT3WXPfYxzC"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
+									<a href="https://peertube.securitymadein.lu/w/oPHoWo16WbAyT3WXPfYxzC"><img src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
 									Eric Bedell
 									<a className="linkedin-link" href="https://www.linkedin.com/in/eric-bedell-86916b11/"><i class="fa fa-linkedin"/></a>
 									<br/>
-									<a href="https://peertube.securitymadein.lu/w/uEwSJfMM4C1VTLB4EhFHaa"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
+									<a href="https://peertube.securitymadein.lu/w/uEwSJfMM4C1VTLB4EhFHaa"><img src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 							</tr>
 							<tr>
@@ -221,7 +229,7 @@ export default class PageGala extends React.Component {
 									Jelena Zelenovic Matone
 									<a className="linkedin-link" href="https://www.linkedin.com/in/jelenazelenovic/"><i class="fa fa-linkedin"/></a>
 									<br/>
-									<a href="https://peertube.securitymadein.lu/w/ifxKNoiuDhttnnBfA6CSYh"><img src="img/logo-ltac-transparent.png" alt="LTAC logo"/></a>
+									<a href="https://peertube.securitymadein.lu/w/ifxKNoiuDhttnnBfA6CSYh"><img src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
 								</td>
 								<td>
 									Stéphane Omnes
