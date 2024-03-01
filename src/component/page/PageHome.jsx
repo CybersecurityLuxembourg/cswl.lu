@@ -56,7 +56,7 @@ export default class PageHome extends React.Component {
                         <h3>Spring edition<br/>in June 2024</h3>
                         <p>Core event:</p>
                         <a
-                            href="https://www.ictspring.com/"
+                            href="https://www.nexus2050.com/"
                             rel="noreferrer"
                             target="_blank">
                             <img

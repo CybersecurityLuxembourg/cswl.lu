@@ -15,7 +15,7 @@ export default class PageSpring extends React.Component {
 
 		this.state = {
 			events: null,
-			coreEventTitle: "ICT SPRING 2024",
+			coreEventTitle: "NEXUS 2050",
 		};
 	}
 
