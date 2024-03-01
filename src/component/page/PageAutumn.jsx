@@ -15,7 +15,7 @@ export default class PageAutumn extends React.Component {
 
 		this.state = {
 			events: null,
-			coreEventTitle: "HACK.LU",
+			coreEventTitle: "HACK.LU 2024",
 		};
 	}
 
