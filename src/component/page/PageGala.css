@@ -1,4 +1,3 @@
-
 .PageGala .awards > div {
 	flex: 50%;
 }
@@ -16,6 +15,7 @@
 	width: 80%;
 	max-width: 200px;
 }
+
 .PageGala .cisos-and-dpos table tr th,
 .PageGala .cisos-and-dpos table tr td {
 	min-width: 100px;
@@ -47,7 +47,6 @@
 	height: 50px !important;
 }
 
-
 .PageGala a img {
 	max-height: 30px;
 	max-width: 100%;
@@ -77,10 +76,10 @@
 
 .PageGala .photo-magicien img {
 	object-fit: cover;
-  	border-radius: 50%;
-  	width: 200px;
-  	max-width: 100%;
-  	height: auto;
+	border-radius: 50%;
+	width: 200px;
+	max-width: 100%;
+	height: auto;
 }
 
 @media screen and (max-width: 980px) {
@@ -106,3 +105,74 @@
 	height: 100%;
 	width: auto;
 }
+
+.gala-category {
+	margin-top: 1%;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	flex-wrap: wrap;
+	gap: 1%;
+}
+
+.gala-categoryItem {
+	cursor:pointer;
+
+	width: 30%;
+	margin-top: 1%;
+	text-align: center;
+	transition: 1s;
+	padding: 1.5rem;
+	border: 1px solid transparent;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+	background: rgb(35,37,38);
+	background: linear-gradient(to right, rgba(35,37,38,1) 47%, rgba(65,67,69,1) 100%);
+	color:white;
+	border-radius: 10px;
+}
+
+
+.gala-categoryItem:hover {
+	border: 1px solid white;
+	transition: 1s;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 7px rgba(0, 0, 0, 0.8);
+	background-position: right center;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+@media (max-width: 1024px) {
+	.gala-categoryItem {
+		width: 45%;
+	}
+}
+
+@media (max-width: 768px) {
+	.gala-categoryItem {
+		width: 100%;
+	}
+}
+
+/* Modal styling */
+.modal {
+	overflow:auto;
+	max-height:90dvh;
+	background: white;
+	padding: 3rem;
+	border-radius: 10px;
+	max-width: 60dvw;
+	margin: auto;
+	z-index: 10;
+	position: relative;
+}
+
+
+.ReactModalPortal, .ReactModal__Overlay--after-open{
+	display:flex;
+	align-content: center;
+	transition: 1s;
+	z-index: 9999;
+}
+
+
