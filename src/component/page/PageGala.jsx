@@ -298,7 +298,7 @@ export default class PageGala extends React.Component {
                     <b>5 categories will be rewarded (click on a category to know more!):</b>
                     <div className="gala-category">
                         <div onClick={() => this.openModal('cisoOfTheYear2024')}
-                             className="gala-categoryItem">CISO-of-the-Year
+                             className="gala-categoryItem">CISO of the Year
                             2024
                         </div>
                         <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO of the Year
