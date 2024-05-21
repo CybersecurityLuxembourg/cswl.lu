@@ -171,7 +171,9 @@ export default class PageGala extends React.Component {
                         </p>
 
                         <h2>TIMELINE</h2>
-                        <img src={"/img/timeline.png"} alt={"ciso timeline"}/>
+                        <div style={{textAlign: 'center'}}>
+                            <img src="/img/slide_time_CISO.png" alt="Timeline"/>
+                        </div>
                     </div>
                 );
             case 'dpoOfTheYear2024':
@@ -227,7 +229,7 @@ export default class PageGala extends React.Component {
 
                         <h2>TIMELINE</h2>
                         <div style={{textAlign: 'center'}}>
-                            <img src="/img/timeline.png" alt="Timeline"/>
+                            <img src="/img/slides_DPO.png" alt="Timeline"/>
                         </div>
 
                     </div>
