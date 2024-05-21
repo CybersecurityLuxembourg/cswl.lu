@@ -299,17 +299,17 @@ export default class PageGala extends React.Component {
                              className="gala-categoryItem">CISO-of-the-Year
                             2024
                         </div>
-                        <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO-of-the-Year
+                        <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO of the Year
                             2024
                         </div>
                         <div onClick={() => this.openModal('mostPromising24')}
-                             className="gala-categoryItem">Most-Promising-Young-Talent 2024
+                             className="gala-categoryItem">Most Promising Young Talent 2024
                         </div>
                         <div onClick={() => this.openModal('bestpaperhack24')} className="gala-categoryItem">Bestpaper@hack.lu
                             2024
                         </div>
                         <div onClick={() => this.openModal('CybersecurityStartAward')}
-                             className="gala-categoryItem">Cybersecurity-Startup-Award 2024
+                             className="gala-categoryItem">Cybersecurity Startup Award 2024
                         </div>
                     </div>
                 </div>
