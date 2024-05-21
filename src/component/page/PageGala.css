@@ -124,11 +124,11 @@
     text-align: center;
     transition: 1s;
     padding: 1.5rem;
-    border: 2px solid black;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-    background: rgb(195, 149, 52);
-    background: linear-gradient(90deg, rgba(195, 149, 52, 1) 41%, rgba(248, 224, 130, 1) 100%);
-    color: black;
+    border: 3px solid goldenrod;
+    box-shadow: 0 1px 3px rgb(218, 165, 32), 0 1px 2px rgb(0, 0, 0);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 41%, rgba(23,23,23,1) 100%);
+    color: white;
     border-radius: 10px;
 
     font-family: "Poetsen One", sans-serif;
@@ -139,9 +139,9 @@
 
 .gala-categoryItem:hover {
     transition: 1s;
-    box-shadow: 0 1px 19px 3px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0 1px 19px -3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 1px 19px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 1px 19px 3px rgb(218, 165, 32);
+    -webkit-box-shadow: 0 1px 19px -3px rgb(218, 165, 32);
+    -moz-box-shadow: 0 1px 19px -3px rgb(218, 165, 32);
     background-position: right center;
     text-decoration: none;
 }
