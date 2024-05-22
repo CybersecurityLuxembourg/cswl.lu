@@ -171,7 +171,9 @@ export default class PageGala extends React.Component {
                         </p>
 
                         <h2>TIMELINE</h2>
-                        <img src={"/img/timeline.png"} alt={"ciso timeline"}/>
+                        <div style={{textAlign: 'center'}}>
+                            <img src="/img/slide_time_CISO.png" alt="Timeline"/>
+                        </div>
                     </div>
                 );
             case 'dpoOfTheYear2024':
@@ -227,7 +229,7 @@ export default class PageGala extends React.Component {
 
                         <h2>TIMELINE</h2>
                         <div style={{textAlign: 'center'}}>
-                            <img src="/img/timeline.png" alt="Timeline"/>
+                            <img src="/img/slides_DPO.png" alt="Timeline"/>
                         </div>
 
                     </div>
@@ -296,20 +298,20 @@ export default class PageGala extends React.Component {
                     <b>5 categories will be rewarded (click on a category to know more!):</b>
                     <div className="gala-category">
                         <div onClick={() => this.openModal('cisoOfTheYear2024')}
-                             className="gala-categoryItem">CISO-of-the-Year
+                             className="gala-categoryItem">CISO of the Year
                             2024
                         </div>
-                        <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO-of-the-Year
+                        <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO of the Year
                             2024
                         </div>
                         <div onClick={() => this.openModal('mostPromising24')}
-                             className="gala-categoryItem">Most-Promising-Young-Talent 2024
+                             className="gala-categoryItem">Most Promising Young Talent 2024
                         </div>
                         <div onClick={() => this.openModal('bestpaperhack24')} className="gala-categoryItem">Bestpaper@hack.lu
                             2024
                         </div>
                         <div onClick={() => this.openModal('CybersecurityStartAward')}
-                             className="gala-categoryItem">Cybersecurity-Startup-Award 2024
+                             className="gala-categoryItem">Cybersecurity Startup Award 2024
                         </div>
                     </div>
                 </div>
