@@ -182,13 +182,17 @@ export default class PageGala extends React.Component {
                         <h2>DPO of the Year 2024</h2>
                         <p>This recognition is personal and is meant as a career-booster.</p>
                         <p>The CISO of the Year Award has been created to give a platform to the talented professionals
-                        that make up the information security community of Luxembourg. The purpose of this recognition
-                        is to highlight the vision and achievements of the winners as well as to extend their network
-                        and visibility in order to encourage more meaningful exchanges within the community.</p>
+                            that make up the information security community of Luxembourg. The purpose of this
+                            recognition
+                            is to highlight the vision and achievements of the winners as well as to extend their
+                            network
+                            and visibility in order to encourage more meaningful exchanges within the community.</p>
                         <p>The CISO of the Year becomes the Ambassador of the community for the coming year and will be
-                        invited to several events to represent the Luxembourg ecosystem.</p>
-                        <p>The CISO of the Year will also remain within the CISO of the Year-awarded family as (s)he will
-                        become the next Vice-President of the jury one year following the nomination, and respectively
+                            invited to several events to represent the Luxembourg ecosystem.</p>
+                        <p>The CISO of the Year will also remain within the CISO of the Year-awarded family as (s)he
+                            will
+                            become the next Vice-President of the jury one year following the nomination, and
+                            respectively
                             President of the Jury on the second year after his/her nomination.</p>
 
                         <h2>WHY YOU SHOULD APPLY?</h2>
@@ -238,8 +242,10 @@ export default class PageGala extends React.Component {
                 return (
                     <div>
                         <h2>Most Promising Young Talent</h2>
-                        <p>The Most Promising Young Talent award will celebrate the national team that will represent Luxembourg at the European Cybersecurity Challenge 2024</p>
-                        <p><b>Find more out about the team <a target={"_blank"} href={"https://lcsc.lu"}>here</a></b></p>
+                        <p>The Most Promising Young Talent award will celebrate the national team that will represent
+                            Luxembourg at the European Cybersecurity Challenge 2024</p>
+                        <p><b>Find more out about the team <a target={"_blank"} href={"https://lcsc.lu"}>here</a></b>
+                        </p>
                     </div>
                 );
             case 'bestpaperhack24':
@@ -301,13 +307,15 @@ export default class PageGala extends React.Component {
                              className="gala-categoryItem">CISO of the Year
                             2024
                         </div>
-                        <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO of the Year
+                        <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO of the
+                            Year
                             2024
                         </div>
                         <div onClick={() => this.openModal('mostPromising24')}
                              className="gala-categoryItem">Most Promising Young Talent 2024
                         </div>
-                        <div onClick={() => this.openModal('bestpaperhack24')} className="gala-categoryItem">Bestpaper@hack.lu
+                        <div onClick={() => this.openModal('bestpaperhack24')}
+                             className="gala-categoryItem">Bestpaper@hack.lu
                             2024
                         </div>
                         <div onClick={() => this.openModal('CybersecurityStartAward')}
@@ -316,8 +324,13 @@ export default class PageGala extends React.Component {
                     </div>
                 </div>
 
-                <h2>CSWL 2023 album</h2>
-
+                <h2>CSWL 2023 album & video</h2>
+                <div class="responsive-iframe-container">
+                    <iframe src="https://www.youtube.com/embed/lACE1EQRc_s?si=xIV5M166DOPKd0OJ"
+                            title="YouTube video player" frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </div>
                 <Carousel
                     dynamicHeight={false}
                     showStatus={false}
