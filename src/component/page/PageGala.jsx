@@ -159,6 +159,12 @@ export default class PageGala extends React.Component {
                             1/ Apply by filling in the dedicated form (available soon) and adding your most recent CV.
                             Applications must be submitted <strong>between 09 September 2024 and 30 September
                             2024</strong>.
+                            </p>
+
+                        <p>
+                            Check out the questions&nbsp;
+                            <a href="https://api.cybersecurity.lu/public/get_public_document/CISO of the YEAR 2024_form.pdf">
+                                <b>now and start preparing your application!</b></a>
                         </p>
                         <p>
                             2/ Interview with the jury. The selected candidates will be invited to meet the members of
@@ -220,6 +226,11 @@ export default class PageGala extends React.Component {
                             1/ Apply by filling in the dedicated form (available soon) and adding your most recent CV.
                             Applications must be submitted <strong>between 09 September 2024 and 30 September
                             2024</strong>.
+                        </p>
+                        <p>
+                            Check out the questions&nbsp;
+                            <a href="https://api.cybersecurity.lu/public/get_public_document/DPO of the YEAR 2024_form.pdf ">
+                                <b>now and start preparing your application!</b></a>
                         </p>
                         <p>
                             2/ Interview with the jury. The selected candidates will be invited to meet the members of
@@ -305,11 +316,15 @@ export default class PageGala extends React.Component {
                     <div className="gala-category">
                         <div onClick={() => this.openModal('cisoOfTheYear2024')}
                              className="gala-categoryItem">CISO of the Year
-                            2024
+                            2024<br/>
+                            <i className="gala-categoryItemDescription">NEW! Questions are available for you to prepare
+                                your application! Click here!</i>
                         </div>
                         <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO of the
                             Year
-                            2024
+                            2024<br/>
+                            <i className="gala-categoryItemDescription">NEW! Questions are available for you to prepare
+                                your application! Click here!</i>
                         </div>
                         <div onClick={() => this.openModal('mostPromising24')}
                              className="gala-categoryItem">Most Promising Young Talent 2024
