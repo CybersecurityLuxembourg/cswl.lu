@@ -337,7 +337,8 @@ export default class PageGala extends React.Component {
                              className="gala-categoryItem">Cybersecurity Startup Award 2024
                         </div>
                     </div>
-                    <h2 className="mt-5">BECOME A PARTNER!</h2>
+                    <br/>
+                    <h2>BECOME A PARTNER!</h2>
                     <p>Enhance your visibility within the cybersecurity community by partnering with us! Reach out to info@lhc.lu!</p>
                     <img src="/img/sponsoring-package.svg" alt="sponsoring package " />
                 </div>
