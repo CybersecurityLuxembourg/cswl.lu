@@ -311,7 +311,7 @@ export default class PageGala extends React.Component {
                 </Modal>
                 <div>
                     <h2>SAVE THE DATE!</h2>
-                    <p>The Gala & Awards Night will take place on 24 October 2024 at Hotel Alvisse!</p>
+                    <p>The Gala & Awards Night will take place on 24 October 2024 at Parc Hotel Alvisse as of 7PM!</p>
                     <b>5 categories will be rewarded (click on a category to know more!):</b>
                     <div className="gala-category">
                         <div onClick={() => this.openModal('cisoOfTheYear2024')}
@@ -337,6 +337,9 @@ export default class PageGala extends React.Component {
                              className="gala-categoryItem">Cybersecurity Startup Award 2024
                         </div>
                     </div>
+                    <h2 className="mt-5">BECOME A PARTNER!</h2>
+                    <p>Enhance your visibility within the cybersecurity community by partnering with us! Reach out to info@lhc.lu!</p>
+                    <img src="/img/sponsoring-package.svg" alt="sponsoring package " />
                 </div>
 
                 <h2>CSWL 2023 album & video</h2>

@@ -72,15 +72,20 @@ export default class PageHome extends React.Component {
                             href="https://hack.lu/"
                             rel="noreferrer"
                             target="_blank">
-                            hack.lu<br/>
+
+                           <b>hack.lu<br/>
                             22 – 25 October 2024<br/>
-                            Parc Hotel Alvisse, Luxembourg<br/>
+                            Parc Hotel Alvisse, Luxembourg<br/></b>
+                            <img
+                                src={"/img/hacklu2024.png"}
+                                alt="CSWL 2024 Hack.lu"
+                            />
                         </a>
                     </div>
                     <div className={"edition-white"}/>
                 </div>
                 <div className={"description"}>
-                    <p>
+                <p>
                         In addition, a series of events will be organised addressing different
                         types of topics, targeting a wide range of audiences.
                     </p>
