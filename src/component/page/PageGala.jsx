@@ -339,7 +339,7 @@ export default class PageGala extends React.Component {
                     </div>
                     <br/>
                     <h2>BECOME A PARTNER!</h2>
-                    <p>Enhance your visibility within the cybersecurity community by partnering with us! Reach out to info@lhc.lu!</p>
+                    <p>Enhance your visibility within the cybersecurity community by partnering with us! Reach out to <a href="mailto:info@lhc.lu">info(at)lhc(dot)lu</a>!</p>
                     <img src="/img/sponsoring-package.svg" alt="sponsoring package " />
                 </div>
 
