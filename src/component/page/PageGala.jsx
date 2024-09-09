@@ -19,7 +19,7 @@ const SponsoringPackages = lazy(() => import('./PageGala/SponsoringPackages'));
 const GalaCategory = React.memo(({ title, description, onClick }) => (
     <div onClick={onClick} className="gala-categoryItem">
         {title}
-        <i className="gala-categoryItemDescription">{description}</i>
+        <i className="gala-categoryItemDescription"><br />{description}</i>
     </div>
 ));
 
