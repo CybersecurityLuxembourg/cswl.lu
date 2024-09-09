@@ -162,9 +162,8 @@ export default class PageGala extends React.Component {
                             </p>
 
                         <p>
-                            Check out the questions&nbsp;
-                            <a href="https://api.cybersecurity.lu/public/get_public_document/CISO of the YEAR 2024_form.pdf">
-                                <b>now and start preparing your application!</b></a>
+                            <a href="https://community.cybersecurity.lu/form?tab=14">
+                                <b>Apply here!</b></a>
                         </p>
                         <p>
                             2/ Interview with the jury. The selected candidates will be invited to meet the members of
@@ -228,9 +227,8 @@ export default class PageGala extends React.Component {
                             2024</strong>.
                         </p>
                         <p>
-                            Check out the questions&nbsp;
-                            <a href="https://api.cybersecurity.lu/public/get_public_document/DPO of the YEAR 2024_form.pdf ">
-                                <b>now and start preparing your application!</b></a>
+                            <a href="https://community.cybersecurity.lu/form?tab=15">
+                                <b>Apply here!</b></a>
                         </p>
                         <p>
                             2/ Interview with the jury. The selected candidates will be invited to meet the members of
@@ -317,13 +315,13 @@ export default class PageGala extends React.Component {
                         <div onClick={() => this.openModal('cisoOfTheYear2024')}
                              className="gala-categoryItem">CISO of the Year
                             2024<br/>
-                            <i className="gala-categoryItemDescription">NEW! Questions are available for you to prepare
+                            <i className="gala-categoryItemDescription">Apply now! Questions are available for you to prepare
                                 your application! Click here!</i>
                         </div>
                         <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO of the
                             Year
                             2024<br/>
-                            <i className="gala-categoryItemDescription">NEW! Questions are available for you to prepare
+                            <i className="gala-categoryItemDescription">Apply now! Questions are available for you to prepare
                                 your application! Click here!</i>
                         </div>
                         <div onClick={() => this.openModal('mostPromising24')}
