@@ -14,7 +14,6 @@ import PagePartners from "./page/PagePartners.jsx";
 import PageGala from "./page/PageGala.jsx";
 import Page404 from "./page/Page404.jsx";
 
-
 class InsideApp extends React.Component {
 	constructor(props) {
 		super(props);
@@ -22,71 +21,59 @@ class InsideApp extends React.Component {
 		this.state = {
 			lhc: null,
 			analytics: null,
+			backgroundImage: "url('../img/cswl_2023_bg.jpg')",
+			logoImage: "url('../img/CSWL_2024.png ')",
+			bgOpacity: 1,
 		};
 	}
 
 	componentDidMount() {
-		this.changeBackground();
-		this.changeLogo();
+		this.updateBackgroundAndLogo();
 		this.getAnalytics();
 		this.getLHC();
 
-		addEventListener("scroll", (event) => {
-			document.getElementById("bg").style.opacity = 1 - (document.documentElement.scrollTop / window.innerHeight * 1.5);
+		this.scrollListener = () => {
+			const opacity = 1 - (window.scrollY / window.innerHeight * 1.5);
+			this.setState({ bgOpacity: Math.max(0, opacity) });
+		};
+
+		window.addEventListener("scroll", this.scrollListener);
+
+		this.unlisten = this.props.history.listen(() => {
+			this.updateBackgroundAndLogo();
 		});
-	}
-
-	componentWillMount() {
-		this.unlistenLogo = this.props.history.listen((location, action) => {
-			this.changeLogo();
-		});
-
-		this.unlistenBackground = this.props.history.listen((location, action) => {
-			this.changeBackground();
-		});
-	}
-
-	changeBackground() {
-		const element = document.getElementById("App");
-
-		if (location.pathname !== "/gala") {
-			element.style.backgroundImage = "url('../img/cswl_2023_bg.jpg')";
-		} else {
-			element.style.backgroundImage = "url('../img/cswl_2023_bg_dark.png')";
-		}
-	}
-
-	changeLogo() {
-		const element = document.getElementById("bg");
-
-		if (location.pathname === "/spring") {
-			element.style.backgroundImage = "url('../img/CSWL_2024_Spring_website.png')";
-		} else if (location.pathname === "/autumn") {
-			element.style.backgroundImage = "url('../img/CSWL_2024_Autumn-website.png')";
-		} else if (location.pathname === "/gala") {
-			element.style.backgroundImage = "url('../img/CSWL_Socials_GALA_2024LOGO.png')";
-		} else {
-			
-			element.style.backgroundImage = "url('../img/CSWL_2024.png ')";
-		}
-		console.log(location.pathname);
 	}
 
 	componentWillUnmount() {
-		this.unlistenLogo();
-		this.unlistenBackground();
+		window.removeEventListener("scroll", this.scrollListener);
+		this.unlisten();
+	}
+
+	updateBackgroundAndLogo() {
+		const { pathname } = this.props.location;
+		let backgroundImage = "url('../img/cswl_2023_bg.jpg')";
+		let logoImage = "url('../img/CSWL_2024.png ')";
+
+		if (pathname === "/gala") {
+			backgroundImage = "url('../img/cswl_2023_bg_dark.png')";
+			logoImage = "url('../img/CSWL_Socials_GALA_2024LOGO.png')";
+		} else if (pathname === "/spring") {
+			logoImage = "url('../img/CSWL_2024_Spring_website.png')";
+		} else if (pathname === "/autumn") {
+			logoImage = "url('../img/CSWL_2024_Autumn-website.png')";
+		}
+
+		this.setState({ backgroundImage, logoImage });
 	}
 
 	getLHC() {
 		getRequest.call(this, "public/get_public_entities?name=(LHC)", (data) => {
 			if (data.length === 1) {
-				this.setState({
-					lhc: data[0],
-				});
+				this.setState({ lhc: data[0] });
 			} else if (data.length === 0) {
-				nm.error("LHC data not found. Please contact administrators."); 
+				nm.error("LHC data not found. Please contact administrators.");
 			} else {
-				nm.error("Multiple entity found for LHC. Please contact administrators."); 
+				nm.error("Multiple entity found for LHC. Please contact administrators.");
 			}
 		}, (response) => {
 			nm.warning(response.statusText);
@@ -97,9 +84,7 @@ class InsideApp extends React.Component {
 
 	getAnalytics() {
 		getRequest.call(this, "public/get_public_analytics", (data) => {
-			this.setState({
-				analytics: data,
-			});
+			this.setState({ analytics: data });
 		}, (response) => {
 			nm.warning(response.statusText);
 		}, (error) => {
@@ -108,82 +93,37 @@ class InsideApp extends React.Component {
 	}
 
 	render() {
+		const { lhc, analytics, backgroundImage, logoImage, bgOpacity } = this.state;
+
 		return (
-			<div id="wrapper" className="fade-in">
+			<div id="wrapper" className="fade-in" style={{ backgroundImage }}>
 				<div id="intro">
-				    <ul className="actions">
-				        <li><a href="#main" className="button icon solo fa-arrow-down scrolly">Continue</a></li>
-				    </ul>
+					<ul className="actions">
+						<li><a href="#main" className="button icon solo fa-arrow-down scrolly">Continue</a></li>
+					</ul>
 				</div>
 
 				<Route path="/:path?" render={(props) => <Menu
-					lhc={this.state.lhc}
-					analytics={this.state.analytics}
+					lhc={lhc}
+					analytics={analytics}
 					{...props}
 				/>}/>
 
 				<div>
 					<Switch>
-						<Route
-							exact
-							path="/"
-							render={(props) => <PageHome
-								lhc={this.state.lhc}
-								analytics={this.state.analytics}
-								{...props}
-							/>}
-						/>
-						<Route
-							exact
-							path="/spring"
-							render={(props) => <PageSpring
-								lhc={this.state.lhc}
-								analytics={this.state.analytics}
-								{...props}
-							/>}
-						/>
-						<Route
-							exact
-							path="/autumn"
-							render={(props) => <PageAutumn
-								lhc={this.state.lhc}
-								analytics={this.state.analytics}
-								{...props}
-							/>}
-						/>
-						<Route
-							exact
-							path="/partners"
-							render={(props) => <PagePartners
-								lhc={this.state.lhc}
-								analytics={this.state.analytics}
-								{...props}
-							/>}
-						/>
-						<Route
-							exact
-							path="/gala"
-							render={(props) => <PageGala
-								lhc={this.state.lhc}
-								analytics={this.state.analytics}
-								{...props}
-							/>}
-						/>
-
-						{/* 404 */}
-
-						<Route
-							render={(props) => <Page404
-								{...props}
-							/>}
-						/>
+						<Route exact path="/" render={(props) => <PageHome lhc={lhc} analytics={analytics} {...props} />} />
+						<Route exact path="/spring" render={(props) => <PageSpring lhc={lhc} analytics={analytics} {...props} />} />
+						<Route exact path="/autumn" render={(props) => <PageAutumn lhc={lhc} analytics={analytics} {...props} />} />
+						<Route exact path="/partners" render={(props) => <PagePartners lhc={lhc} analytics={analytics} {...props} />} />
+						<Route exact path="/gala" render={(props) => <PageGala lhc={lhc} analytics={analytics} {...props} />} />
+						<Route render={(props) => <Page404 {...props} />} />
 					</Switch>
 				</div>
 
-				<div id="bg" className="bg fixed" style={{ transform: "none" }}/>
+				<div id="bg" className="bg fixed" style={{ backgroundImage: logoImage, opacity: bgOpacity, transform: "none" }} />
 				<link rel="preload" as="image" href="/img/CSWL_2024.png"/>
 				<link rel="preload" as="image" href="/img/CSWL_2024_Spring_website.png"/>
-				<link rel="preload" as="image" href="/img/CSWL_2024_Spring_website.png"/>
+				<link rel="preload" as="image" href="/img/CSWL_2024_Autumn-website.png"/>
 				<link rel="preload" as="image" href="/img/CSWL_Socials_GALA_2024LOGO.png"/>
 				<Footer/>
 			</div>
