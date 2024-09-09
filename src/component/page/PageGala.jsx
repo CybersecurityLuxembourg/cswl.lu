@@ -1,114 +1,111 @@
-import React from "react";
+import React, { useState, useEffect, useCallback, useMemo, lazy, Suspense } from 'react';
+import PropTypes from 'prop-types';
 import "./PageGala.css";
-import {Carousel} from "react-responsive-carousel";
-import Popup from "reactjs-popup";
-import {NotificationManager as nm} from "react-notifications";
+import { Carousel } from "react-responsive-carousel";
+import { NotificationManager as nm } from "react-notifications";
 import Modal from 'react-modal';
-import {Link} from "react-router-dom";
-import Loading from "../box/Loading.jsx";
-import Message from "../box/Message.jsx";
-import BoxAddYourEvent from "../box/BoxAddYourEvent.jsx";
-import {getRequest} from "../../utils/request.jsx";
-import {dictToURI} from "../../utils/url.jsx";
-import {getPrivateAppURL} from "../../utils/env.jsx";
+import { getRequest } from "../../utils/request.jsx";
+import { dictToURI } from "../../utils/url.jsx";
 import Entity from "../item/Entity.jsx";
-import ShadowBox from "../box/ShadowBox.jsx";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 Modal.setAppElement('#root');
 
-export default class PageGala extends React.Component {
+const SponsoringPackages = lazy(() => import('./PageGala/SponsoringPackages'));
 
-    constructor(props) {
-        super(props);
+const GalaCategory = React.memo(({ title, description, onClick }) => (
+    <div onClick={onClick} className="gala-categoryItem">
+        {title}
+        <i className="gala-categoryItemDescription"><br />{description}</i>
+    </div>
+));
 
-        this.state = {
-            modalIsOpen: false,
-            currentCategory: '',
-            springPartners: [],
-            autumnPartners: []
-        }
+GalaCategory.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    onClick: PropTypes.func.isRequired,
+};
 
-        this.openModal = this.openModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
-    }
+const GalaCategories = React.memo(({ openModal }) => (
+    <div className="gala-category">
+        <GalaCategory
+            title="CISO of the Year 2024"
+            description="Apply now and Click here!"
+            onClick={() => openModal('cisoOfTheYear2024')}
+        />
+        <GalaCategory
+            title="DPO of the Year 2024"
+            description="Apply now and Click here!"
+            onClick={() => openModal('dpoOfTheYear2024')}
+        />
+        <GalaCategory
+            title="Most Promising Young Talent 2024"
+            description=""
+            onClick={() => openModal('mostPromising24')}
+        />
+        <GalaCategory
+            title="Bestpaper@hack.lu 2024"
+            description=""
+            onClick={() => openModal('bestpaperhack24')}
+        />
+        <GalaCategory
+            title="Cybersecurity Startup Award 2024"
+            description=""
+            onClick={() => openModal('CybersecurityStartAward')}
+        />
+    </div>
+));
 
-    componentDidMount() {
-        this.getSpringPartners();
-        this.getAutumnPartners();
-    }
+GalaCategories.propTypes = {
+    openModal: PropTypes.func.isRequired,
+};
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.lhc !== this.props.lhc) {
-            this.getSpringPartners();
-            this.getAutumnPartners();
-        }
+const PageGala = ({ lhc, analytics }) => {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [currentCategory, setCurrentCategory] = useState('');
+    const [springPartners, setSpringPartners] = useState([]);
+    const [autumnPartners, setAutumnPartners] = useState([]);
+    const [isSponsoringPackagesLoaded, setSponsoringPackagesLoaded] = useState(false);
 
-        if (prevProps.analytics !== this.props.analytics) {
-            this.getSpringPartners();
-            this.getAutumnPartners();
-        }
-    }
+    const openModal = useCallback((category) => {
+        setModalIsOpen(true);
+        setCurrentCategory(category);
+    }, []);
 
-    getSpringPartners(page) {
-        if (this.props.lhc && this.props.analytics) {
-            const tv = this.props.analytics.taxonomy_values
+    const closeModal = useCallback(() => {
+        setModalIsOpen(false);
+        setCurrentCategory('');
+    }, []);
+
+    const getPartners = useCallback((partnerType, setPartners) => {
+        if (lhc && analytics) {
+            const tv = analytics.taxonomy_values
                 .filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2024")
-                .filter((v) => v.name === "SPRING EDITION PARTNER");
+                .filter((v) => v.name === partnerType);
 
             if (tv.length > 0) {
                 const params = {
                     taxonomy_values: tv.map((t) => t.id),
                 };
 
-                getRequest.call(this, "public/get_public_entities?" + dictToURI(params), (data) => {
-                    this.setState({
-                        springPartners: data,
-                    });
-                }, (response) => {
-                    nm.warning(response.statusText);
-                }, (error) => {
-                    nm.error(error.message);
-                });
+                getRequest("public/get_public_entities?" + dictToURI(params),
+                    (data) => setPartners(data),
+                    (response) => nm.warning(response.statusText),
+                    (error) => nm.error(error.message)
+                );
             }
         }
-    }
+    }, [lhc, analytics]);
 
-    getAutumnPartners(page) {
-        if (this.props.lhc && this.props.analytics) {
-            const tv = this.props.analytics.taxonomy_values
-                .filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2024")
-                .filter((v) => v.name === "AUTUMN EDITION PARTNER");
+    useEffect(() => {
+        getPartners("SPRING EDITION PARTNER", setSpringPartners);
+        getPartners("AUTUMN EDITION PARTNER", setAutumnPartners);
+    }, [getPartners]);
 
-            if (tv.length > 0) {
-                const params = {
-                    taxonomy_values: tv.map((t) => t.id),
-                };
-
-                getRequest.call(this, "public/get_public_entities?" + dictToURI(params), (data) => {
-                    this.setState({
-                        autumnPartners: data,
-                    });
-                }, (response) => {
-                    nm.warning(response.statusText);
-                }, (error) => {
-                    nm.error(error.message);
-                });
-            }
-        }
-    }
-
-    openModal(category) {
-        this.setState({modalIsOpen: true, currentCategory: category});
-    }
-
-    closeModal() {
-        this.setState({modalIsOpen: false, currentCategory: ''});
-    }
-
-    renderModalContent() {
-        const {currentCategory, springPartners, autumnPartners} = this.state;
-
+    const renderModalContent = useMemo(() => {
         switch (currentCategory) {
             case 'cisoOfTheYear2024':
                 return (
@@ -159,12 +156,11 @@ export default class PageGala extends React.Component {
                             1/ Apply by filling in the dedicated form (available soon) and adding your most recent CV.
                             Applications must be submitted <strong>between 09 September 2024 and 30 September
                             2024</strong>.
-                            </p>
+                        </p>
 
                         <p>
-                            Check out the questions&nbsp;
-                            <a href="https://api.cybersecurity.lu/public/get_public_document/CISO of the YEAR 2024_form.pdf">
-                                <b>now and start preparing your application!</b></a>
+                            <a href="https://community.cybersecurity.lu/form?tab=14">
+                                <b>Apply here!</b></a>
                         </p>
                         <p>
                             2/ Interview with the jury. The selected candidates will be invited to meet the members of
@@ -228,9 +224,8 @@ export default class PageGala extends React.Component {
                             2024</strong>.
                         </p>
                         <p>
-                            Check out the questions&nbsp;
-                            <a href="https://api.cybersecurity.lu/public/get_public_document/DPO of the YEAR 2024_form.pdf ">
-                                <b>now and start preparing your application!</b></a>
+                            <a href="https://community.cybersecurity.lu/form?tab=15">
+                                <b>Apply here!</b></a>
                         </p>
                         <p>
                             2/ Interview with the jury. The selected candidates will be invited to meet the members of
@@ -255,8 +250,7 @@ export default class PageGala extends React.Component {
                         <h2>Most Promising Young Talent</h2>
                         <p>The Most Promising Young Talent award will celebrate the national team that will represent
                             Luxembourg at the European Cybersecurity Challenge 2024</p>
-                        <p><b>Find more out about the team <a target={"_blank"} href={"https://lcsc.lu"}>here</a></b>
-                        </p>
+                        <p><b>Find more out about the team <a target="_blank" rel="noopener noreferrer" href="https://lcsc.lu">here</a></b></p>
                     </div>
                 );
             case 'bestpaperhack24':
@@ -276,231 +270,230 @@ export default class PageGala extends React.Component {
             default:
                 return <div>No content available</div>;
         }
-    }
+    }, [currentCategory]);
 
-    getContent(list) {
-        const content = [];
+    const renderPartners = useCallback((partners) => {
+        return partners.map((partner, index) => (
+            <Entity key={index} info={partner} />
+        ));
+    }, []);
 
-        list.map((e) => {
-            content.push(
-                <Entity
-                    info={e}
-                />
-            );
-        })
+    return (
+        <div id="main" className="PageGala light-fade-in-effect">
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                className="modal"
+                contentLabel="Category Modal"
+            >
+                <button onClick={closeModal}>Close</button>
+                {renderModalContent}
+            </Modal>
 
-        return content
-    }
-
-    changeState(field, value) {
-        this.setState({[field]: value});
-    }
-
-    render() {
-        return (
-
-            <div id={"main"} className="PageGala light-fade-in-effect">
-                <Modal
-                    isOpen={this.state.modalIsOpen}
-                    onRequestClose={this.closeModal}
-                    className="modal"
-                    contentLabel="Category Modal"
-                >
-                    <button onClick={this.closeModal}>Close</button>
-                    {this.renderModalContent()}
-                </Modal>
-                <div>
-                    <h2>SAVE THE DATE!</h2>
-                    <p>The Gala & Awards Night will take place on 24 October 2024 at Parc Hotel Alvisse as of 7PM!</p>
-                    <b>5 categories will be rewarded (click on a category to know more!):</b>
-                    <div className="gala-category">
-                        <div onClick={() => this.openModal('cisoOfTheYear2024')}
-                             className="gala-categoryItem">CISO of the Year
-                            2024<br/>
-                            <i className="gala-categoryItemDescription">NEW! Questions are available for you to prepare
-                                your application! Click here!</i>
-                        </div>
-                        <div onClick={() => this.openModal('dpoOfTheYear2024')} className="gala-categoryItem">DPO of the
-                            Year
-                            2024<br/>
-                            <i className="gala-categoryItemDescription">NEW! Questions are available for you to prepare
-                                your application! Click here!</i>
-                        </div>
-                        <div onClick={() => this.openModal('mostPromising24')}
-                             className="gala-categoryItem">Most Promising Young Talent 2024
-                        </div>
-                        <div onClick={() => this.openModal('bestpaperhack24')}
-                             className="gala-categoryItem">Bestpaper@hack.lu
-                            2024
-                        </div>
-                        <div onClick={() => this.openModal('CybersecurityStartAward')}
-                             className="gala-categoryItem">Cybersecurity Startup Award 2024
-                        </div>
-                    </div>
-                    <br/>
-                    <h2>BECOME A PARTNER!</h2>
-                    <p>Enhance your visibility within the cybersecurity community by partnering with us! Reach out to <a href="mailto:info@lhc.lu">info(at)lhc(dot)lu</a>!</p>
-                    <img src="/img/sponsoring-packages.svg" alt="sponsoring package " />
-                </div>
-
-                <h2>CSWL 2023 album & video</h2>
-                <div class="responsive-iframe-container">
-                    <iframe src="https://www.youtube.com/embed/lACE1EQRc_s?si=xIV5M166DOPKd0OJ"
-                            title="YouTube video player" frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                </div>
-                <Carousel
-                    dynamicHeight={false}
-                    showStatus={false}
-                    showThumbs={false}
-                    infiniteLoop={true}
-                    autoPlay={true}
-                    interval={5000}
-                >
-                    <img src="/img/CSWL_2023_pict-11.jpg"/>
-                    <img src="/img/CSWL_2023_pict-5.jpg"/>
-                    <img src="/img/CSWL_2023_pict-4.jpg"/>
-                    <img src="/img/CSWL_2023_pict-9.jpg"/>
-                    <img src="/img/CSWL_2023_pict-10.jpg"/>
-                    <img src="/img/CSWL_2023_pict-12.jpg"/>
-                    <img src="/img/CSWL_2023_pict-6.jpg"/>
-                    <img src="/img/CSWL_2023_pict-8.jpg"/>
-                    <img src="/img/CSWL_2023_pict-13.jpg"/>
-                    <img src="/img/CSWL_2023_pict-1.jpg"/>
-                    <img src="/img/CSWL_2023_pict-7.jpg"/>
-                    <img src="/img/CSWL_2023_pict-2.jpg"/>
-                    <img src="/img/CSWL_2023_pict-3.jpg"/>
-                </Carousel>
-
-                <h2>Past editions</h2>
-
-                <p>Rediscover the winners from previous years!</p>
-
-                <div className="cisos-and-dpos">
-                    <table className="table">
-                        <thead>
-                        <tr>
-                            <th>Year</th>
-                            <th>CISOs of the Year</th>
-                            <th>DPOs of the Year</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><b>2023</b></td>
-                            <td>
-                                <div>
-                                    <img className="profile" src="/img/franck_bedell_award.png"
-                                         alt={"franck bedell award"}/>
-                                </div>
-                                Franck Bedell
-                                <a className="linkedin-link" href="https://www.linkedin.com/in/franckbedell/"><i
-                                    class="fa fa-linkedin"/></a>
-                                <br/>
-                                <a href="https://open.spotify.com/episode/2neFPrxXGDp2ziDO7EWwsL?si=f085000fbc65489c"><img
-                                    src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
-                            </td>
-                            <td>
-                                <div>
-                                    <img className="profile" src="/img/julien_winkin_award.png"/>
-                                </div>
-                                Julien Winkin
-                                <a className="linkedin-link" href="https://www.linkedin.com/in/julienwinkin/"><i
-                                    class="fa fa-linkedin"/></a>
-                                <br/>
-                                <a href="https://open.spotify.com/episode/1xib3kK7re9Mt2rPdg7doV?si=Fbzn3MAVSOWi7UVptqRaX"><img
-                                    src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><b>2022</b></td>
-                            <td>
-                                Guy Isler
-                                <a className="linkedin-link" href="https://www.linkedin.com/in/guy-isler-21184875/"><i
-                                    class="fa fa-linkedin"/></a>
-                                <br/>
-                                <a href="https://peertube.securitymadein.lu/w/fvMgd2C1cVKxThrpxedAVA"><img
-                                    src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
-                            </td>
-                            <td>
-                                Maximilien Spielmann
-                                <a className="linkedin-link"
-                                   href="https://www.linkedin.com/in/max-spielmann-369963269/"><i
-                                    class="fa fa-linkedin"/></a>
-                                <br/>
-                                <a href="https://peertube.securitymadein.lu/w/vhZkZy7GSG92gPzkDk1Uw2"><img
-                                    src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><b>2021</b></td>
-                            <td>
-                                Dalia Khader
-                                <a className="linkedin-link" href="https://www.linkedin.com/in/dalia-khader-2b13b6a/"><i
-                                    class="fa fa-linkedin"/></a>
-                                <br/>
-                                <a href="https://peertube.securitymadein.lu/w/jXVXXgX3TkCUa5j9TpgcQq"><img
-                                    src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
-                            </td>
-                            <td>
-                                Matthieu Gatineau
-                                <a className="linkedin-link"
-                                   href="https://www.linkedin.com/in/matthieu-gatineau-78ba3611/"><i
-                                    class="fa fa-linkedin"/></a>
-                                <br/>
-                                <a href="https://peertube.securitymadein.lu/w/wMo5GxPmupHLonZzWHU4ED"><img
-                                    src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><b>2020</b></td>
-                            <td>
-                                Stephane Bianchin
-                                <br/>
-                                <a href="https://peertube.securitymadein.lu/w/oPHoWo16WbAyT3WXPfYxzC"><img
-                                    src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
-                            </td>
-                            <td>
-                                Eric Bedell
-                                <a className="linkedin-link" href="https://www.linkedin.com/in/eric-bedell-86916b11/"><i
-                                    class="fa fa-linkedin"/></a>
-                                <br/>
-                                <a href="https://peertube.securitymadein.lu/w/uEwSJfMM4C1VTLB4EhFHaa"><img
-                                    src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><b>2019</b></td>
-                            <td>
-                                Jelena Zelenovic Matone
-                                <a className="linkedin-link" href="https://www.linkedin.com/in/jelenazelenovic/"><i
-                                    class="fa fa-linkedin"/></a>
-                                <br/>
-                                <a href="https://peertube.securitymadein.lu/w/ifxKNoiuDhttnnBfA6CSYh"><img
-                                    src="img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"/></a>
-                            </td>
-                            <td>
-                                Stéphane Omnes
-                                <a className="linkedin-link" href="https://www.linkedin.com/in/stephaneomnes/"><i
-                                    class="fa fa-linkedin"/></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><b>2018</b></td>
-                            <td>Grégory Nou</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><b>2017</b></td>
-                            <td>Maria Dolores Perez</td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-
+            <div>
+                <h2>SAVE THE DATE!</h2>
+                <p>The Gala & Awards Night will take place on 24 October 2024 at Parc Hotel Alvisse as of 7PM!</p>
+                <b>5 categories will be rewarded (click on a category to know more!):</b>
+                <GalaCategories openModal={openModal}/>
             </div>
-        );
-    }
-}
+
+            <h2>BECOME A PARTNER!</h2>
+            <p>Enhance your visibility within the cybersecurity community by partnering with us! Reach out to <a
+                href="mailto:info@lhc.lu">info(at)lhc(dot)lu</a>!</p>
+
+            <Suspense fallback={<div>Loading sponsoring packages...</div>}>
+                <SponsoringPackages onLoad={() => setSponsoringPackagesLoaded(true)}/>
+            </Suspense>
+
+            <h2>CSWL 2023 album & video</h2>
+            <div className="responsive-iframe-container">
+                <iframe
+                    src="https://www.youtube.com/embed/lACE1EQRc_s?si=xIV5M166DOPKd0OJ"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                />
+            </div>
+
+            <Carousel
+                dynamicHeight={false}
+                showStatus={false}
+                showThumbs={false}
+                infiniteLoop={true}
+                autoPlay={true}
+                interval={5000}
+            >
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((num) => (
+                    <LazyLoadImage
+                        key={num}
+                        src={`/img/CSWL_2023_pict-${num}.jpg`}
+                        alt={`CSWL 2023 picture ${num}`}
+                        effect="blur"
+                    />
+                ))}
+            </Carousel>
+
+            <h2>Past editions</h2>
+            <p>Rediscover the winners from previous years!</p>
+
+            <div className="cisos-and-dpos">
+                <table className="table">
+                    <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>CISOs of the Year</th>
+                        <th>DPOs of the Year</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>2023</b></td>
+                        <td>
+                            <div>
+                                <LazyLoadImage className="profile" src="/img/franck_bedell_award.png"
+                                               alt="franck bedell award" effect="blur"/>
+                            </div>
+                            Franck Bedell
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/franckbedell/"><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                            <a href="https://open.spotify.com/episode/2neFPrxXGDp2ziDO7EWwsL?si=f085000fbc65489c">
+                                <LazyLoadImage src="/img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"
+                                               effect="blur"/>
+                            </a>
+                        </td>
+                        <td>
+                            <div>
+                                <LazyLoadImage className="profile" src="/img/julien_winkin_award.png"
+                                               alt="julien winkin award" effect="blur"/>
+                            </div>
+                            Julien Winkin
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/julienwinkin/"><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                            <a href="https://open.spotify.com/episode/1xib3kK7re9Mt2rPdg7doV?si=Fbzn3MAVSOWi7UVptqRaX">
+                                <LazyLoadImage src="/img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"
+                                               effect="blur"/>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>2022</b></td>
+                        <td>
+                            Guy Isler
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/guy-isler-21184875/"><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                            <a href="https://peertube.securitymadein.lu/w/fvMgd2C1cVKxThrpxedAVA">
+                                <LazyLoadImage src="/img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"
+                                               effect="blur"/>
+                            </a>
+                        </td>
+                        <td>
+                            Maximilien Spielmann
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/max-spielmann-369963269/"><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                            <a href="https://peertube.securitymadein.lu/w/vhZkZy7GSG92gPzkDk1Uw2">
+                                <LazyLoadImage src="/img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"
+                                               effect="blur"/>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>2021</b></td>
+                        <td>
+                            Dalia Khader
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/dalia-khader-2b13b6a/"><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                            <a href="https://peertube.securitymadein.lu/w/jXVXXgX3TkCUa5j9TpgcQq">
+                                <LazyLoadImage src="/img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"
+                                               effect="blur"/>
+                            </a>
+                        </td>
+                        <td>
+                            Matthieu Gatineau
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/matthieu-gatineau-78ba3611/"><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                            <a href="https://peertube.securitymadein.lu/w/wMo5GxPmupHLonZzWHU4ED">
+                                <LazyLoadImage src="/img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"
+                                               effect="blur"/>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>2020</b></td>
+                        <td>
+                            Stephane Bianchin
+                            <br/>
+                            <a href="https://peertube.securitymadein.lu/w/oPHoWo16WbAyT3WXPfYxzC">
+                                <LazyLoadImage src="/img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"
+                                               effect="blur"/>
+                            </a>
+                        </td>
+                        <td>
+                            Eric Bedell
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/eric-bedell-86916b11/"><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                            <a href="https://peertube.securitymadein.lu/w/uEwSJfMM4C1VTLB4EhFHaa">
+                                <LazyLoadImage src="/img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"
+                                               effect="blur"/>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>2019</b></td>
+                        <td>
+                            Jelena Zelenovic Matone
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/jelenazelenovic/"><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                            <a href="https://peertube.securitymadein.lu/w/ifxKNoiuDhttnnBfA6CSYh">
+                                <LazyLoadImage src="/img/Letz talk about cyber logo_transparent.png" alt="LTAC logo"
+                                               effect="blur"/>
+                            </a>
+                        </td>
+                        <td>
+                            Stéphane Omnes
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/stephaneomnes/"><i
+                                className="fa fa-linkedin"/></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>2018</b></td>
+                        <td>Grégory Nou</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b>2017</b></td>
+                        <td>Maria Dolores Perez</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Spring Partners</h2>
+            <div className="partners-container">
+                {renderPartners(springPartners)}
+            </div>
+
+            <h2>Autumn Partners</h2>
+            <div className="partners-container">
+                {renderPartners(autumnPartners)}
+            </div>
+        </div>
+    );
+};
+
+PageGala.propTypes = {
+    lhc: PropTypes.object,
+    analytics: PropTypes.object,
+};
+
+export default React.memo(PageGala);

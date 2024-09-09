@@ -73,7 +73,7 @@ export default class Footer extends React.Component {
 						</div>
 						<div>
 							<a
-								href={getApiURL() + "public/get_public_document/CSWL Protection Notice_v1_FINAL.pdf"}
+								href={getApiURL() + "public/get_public_document/CSWL Protection Notice_v1.1_FINAL.pdf"}
 								rel="noreferrer"
 								target="_blank"
 								title="Terms of use"

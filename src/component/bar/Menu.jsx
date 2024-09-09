@@ -1,58 +1,52 @@
 import React from "react";
 import "./Menu.css";
-import { NotificationManager as nm } from "react-notifications";
+import { NavLink } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
-import { Link } from "react-router-dom";
-import Message from "../box/Message.jsx";
-import { dictToURI } from "../../utils/url.jsx";
 
-export default class Menu extends React.Component {
-	constructor(props) {
-		super(props);
+const Menu = () => {
+	return (
+		<Nav id="nav" className="mr-sm-2 ml-auto">
+			<ul className="links">
+				<li>
+					<NavLink exact to="/" activeClassName={"active"} className={"nav-link-general"}>
+						About
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to="/spring" activeClassName={"active"} className={"nav-link-spring"}>
+						Spring Edition
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to="/autumn" activeClassName={"active"} className={"nav-link-autumn"}>
+						Autumn Edition
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to="/partners" activeClassName={"active"} className={"nav-link-general"}>
+						Partners
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to="/gala" activeClassName={"active"} className={"nav-link-general"}>
+						Gala and Awards Night
+					</NavLink>
+				</li>
+			</ul>
+			<ul className="icons">
+				<li>
+					<a href="https://twitter.com/cyberluxembourg" className={"icon fa-twitter"} target="_blank" rel="noopener noreferrer">
+						<span className="label">Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/company/cybersecurity-luxembourg/" className={"icon fa-linkedin"} target="_blank" rel="noopener noreferrer">
+						<span className="label">LinkedIn</span>
+					</a>
+				</li>
+			</ul>
+		</Nav>
+	);
+};
 
-		this.state = {
-		};
-	}
-
-	setHash(hash) {
-		window.location.hash = hash;
-	}
-
-	render() {
-		return (
-			<Nav id="nav" className="mr-sm-2 ml-auto">
-				<ul className="links">
-					<Nav.Link>
-						<Link to="/">
-							<li className={window.location.pathname === "/" && "active"}><a>About</a></li>
-						</Link>
-					</Nav.Link>
-					<Nav.Link className="nav-link-spring">
-						<Link to="/spring">
-							<li className={window.location.pathname === "/spring" && "active"}><a>Spring Edition</a></li>
-						</Link>
-					</Nav.Link>
-					<Nav.Link className="nav-link-autumn">
-						<Link to="/autumn">
-							<li className={window.location.pathname === "/autumn" && "active"}><a>Autumn Edition</a></li>
-						</Link>
-					</Nav.Link>
-					<Nav.Link>
-						<Link to="/partners">
-							<li className={window.location.pathname === "/partners" && "active"}><a>Partners</a></li>
-						</Link>
-					</Nav.Link>
-					<Nav.Link>
-						<Link to="/gala">
-							<li className={window.location.pathname === "/gala" && "active"}><a>Gala and Awards Night</a></li>
-						</Link>
-					</Nav.Link>
-				</ul>
-				<ul className="icons">
-					<li><a href="https://twitter.com/cyberluxembourg" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-					<li><a href="https://www.linkedin.com/company/cybersecurity-luxembourg/" className="icon fa-linkedin"><span className="label">LinkedIn</span></a></li>
-				</ul>
-			</Nav>
-		);
-	}
-}
+export default Menu;
