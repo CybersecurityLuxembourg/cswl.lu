@@ -65,7 +65,7 @@ export default class PagePartners extends React.Component {
 		if (this.props.lhc && this.props.analytics) {
 			const tv = this.props.analytics.taxonomy_values
 				.filter((v) => v.category === "CYBERSECURITY WEEK PARTNER 2024")
-				.filter((v) => v.name === "AUTUMN EDITION PARTNER");
+				.filter((v) => v.name === "SPRING EDITION PARTNER");
 
 			if (tv.length > 0) {
 				const params = {
