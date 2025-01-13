@@ -46,39 +46,51 @@ export default class PageHome extends React.Component {
                 <div className={"editions-small"}>
                     <div className={"edition-white"}/>
                     <div className={"edition"}>
-                        <h3>Spring edition<br/>in June 2024</h3>
+                        <h3>Spring edition<br/>in June 2025</h3>
+                        <p>Explore the various events organized within the CSWL SPRING here!</p>
                         <p>Core event:</p>
                         <a
-                            href="https://www.nexus2050.com/"
+                            href="/spring"
                             rel="noreferrer"
                             target="_blank">
                             <img
-                                src={"/img/spring_core_event.png"}
-                                alt="CSWL 2024 Spring light"
+                                src={"/img/CSWL_2025_SPRING_LINKEDIN_COMPANY_BANNER.svg"}
+                                alt="CSWL 2025 Spring light"
                             />
                         </a>
                     </div>
                     <div className={"edition"}>
-                        <h3>Autumn edition<br/>in October 2024</h3>
+                        <h3>Autumn edition<br/>in October 2025</h3>
                         <p>Core event:</p>
                         <a
                             href="https://hack.lu/"
                             rel="noreferrer"
                             target="_blank">
 
-                           <b>hack.lu<br/>
-                            22 – 25 October 2024<br/>
-                            Parc Hotel Alvisse, Luxembourg<br/></b>
+                            <b>hack.lu<br/>
+                                21 - 24 October 2025<br/>Parc Hotel Alvisse, Luxembourg<br/></b>
                             <img
                                 src={"/img/hacklu2024.png"}
                                 alt="CSWL 2024 Hack.lu"
                             />
                         </a>
                     </div>
+                    <div className={"edition"}>
+                        <h3>SPECIAL EDITION 2025</h3>
+                        <p>Core event:</p>
+                        <a
+                            href="#"
+                            rel="noreferrer"
+                            target="_blank">
+
+                            <b>CSWL @Expo Osaka 2025<br/>
+                                28 August - 03 September 2025</b>
+                        </a>
+                    </div>
                     <div className={"edition-white"}/>
                 </div>
                 <div className={"description"}>
-                <p>
+                    <p>
                         In addition, a series of events will be organised addressing different
                         types of topics, targeting a wide range of audiences.
                     </p>
@@ -98,8 +110,8 @@ export default class PageHome extends React.Component {
                             rel="noreferrer"
                             target="_blank">
                             <img
-                                src={"/img/short_2024_Spring.png"}
-                                alt="CSWL 2024 Spring light"
+                                src={"/img/CSWL_2025_SPRING_LINKEDIN POST-07.svg"}
+                                alt="CSWL 2025 Spring light"
                             />
 
                         </a>

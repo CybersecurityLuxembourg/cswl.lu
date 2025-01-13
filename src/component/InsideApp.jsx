@@ -22,7 +22,7 @@ class InsideApp extends React.Component {
 			lhc: null,
 			analytics: null,
 			backgroundImage: "url('../img/cswl_2023_bg.jpg')",
-			logoImage: "url('../img/CSWL_2024.png ')",
+			logoImage: "url('../img/CSWL_2024.png')",
 			bgOpacity: 1,
 		};
 	}
@@ -52,7 +52,7 @@ class InsideApp extends React.Component {
 	updateBackgroundAndLogo() {
 		const { pathname } = this.props.location;
 		let backgroundImage = "url('../img/cswl_2023_bg.jpg')";
-		let logoImage = "url('../img/CSWL_2024.png ')";
+		let logoImage = "url('../img/CSWL_2025_SPRING_CSWL_16-9_copy.svg')";
 
 		if (pathname === "/gala") {
 			backgroundImage = "url('../img/cswl_2023_bg_dark.png')";
