@@ -37,7 +37,7 @@ export default class PageSpring extends React.Component {
 		if (this.props.lhc && this.props.analytics) {
 			const tv = this.props.analytics.taxonomy_values
 				.filter((v) => v.category === "EVENT CATEGORY")
-				.filter((v) => v.name === "CSWL 2024 - SPRING EDITION");
+				.filter((v) => v.name === "CSWL 2025 - SPRING EDITION");
 
 			if (tv.length > 0) {
 				const params = {
@@ -86,19 +86,7 @@ export default class PageSpring extends React.Component {
 	render() {
 		return (
 			<div id={"main"} className="PageSpring light-fade-in-effect">
-				<h2>Core event</h2>
 
-				<section className="PageSpring-coreevent">
-					{this.state.events
-						&& this.state.events.items
-						.filter((e) => e.title.toUpperCase() === this.state.coreEventTitle)
-						.map((e) => {
-							return <Event
-								info={e}
-							/>
-						}
-					)}
-				</section>
 
 				<h2>Full agenda</h2>
 

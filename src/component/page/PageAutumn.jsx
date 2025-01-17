@@ -85,19 +85,6 @@ export default class PageAutumn extends React.Component {
 	render() {
 		return (
 			<div id={"main"} className="PageAutumn light-fade-in-effect">
-				<h2>Core event</h2>
-
-				<section className="PageAutumn-coreevent">
-					{this.state.events
-						&& this.state.events.items
-						.filter((e) => e.title.toUpperCase() === this.state.coreEventTitle)
-						.map((e) => {
-							return <Event
-								info={e}
-							/>
-						}
-					)}
-				</section>
 
 				<h2>Full agenda</h2>
 
