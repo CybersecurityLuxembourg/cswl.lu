@@ -122,8 +122,8 @@ export default class PageHome extends React.Component {
                             rel="noreferrer"
                             target="_blank">
                             <img
-                                src={"/img/short_2024_Autumn.png"}
-                                alt="CSWL 2024 Autumnn light"
+                                src={"/img/CSWL_2025_Autumn.svg"}
+                                alt="CSWL 2025 Autumnn light"
                             />
                         </a>
                     </div>

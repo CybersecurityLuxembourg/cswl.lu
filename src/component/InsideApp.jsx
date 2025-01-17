@@ -18,16 +18,42 @@ class InsideApp extends React.Component {
 	constructor(props) {
 		super(props);
 
+		// Centralized image mapping
+		this.imageMap = {
+			default: {
+				background: "/img/cswl_2023_bg.jpg",
+				logo: "/img/CSWL_2025_SPRING_CSWL_16-9_copy.svg"
+			},
+			gala: {
+				background: "/img/cswl_2023_bg_dark.png",
+				logo: "/img/CSWL_Socials_GALA_2025LOGO.svg"
+			},
+			spring: {
+				background: "/img/cswl_2023_bg.jpg",
+				logo: "/img/CSWL_2025_SPRING_LINKEDIN_COMPANY_BANNER.svg"
+			},
+			autumn: {
+				background: "/img/cswl_2023_bg.jpg",
+				logo: "/img/CSWL_2025_Autumn_LINKEDIN_POST.svg"
+			}
+		};
+
 		this.state = {
 			lhc: null,
 			analytics: null,
-			backgroundImage: "url('../img/cswl_2023_bg.jpg')",
-			logoImage: "url('../img/CSWL_2024.png')",
+			backgroundImage: `url('${this.imageMap.default.background}')`,
+			logoImage: `url('${this.imageMap.default.logo}')`,
 			bgOpacity: 1,
 		};
 	}
 
 	componentDidMount() {
+		// Pre-load all images immediately
+		Object.values(this.imageMap).forEach(({ background, logo }) => {
+			new Image().src = background;
+			new Image().src = logo;
+		});
+
 		this.updateBackgroundAndLogo();
 		this.getAnalytics();
 		this.getLHC();
@@ -39,8 +65,11 @@ class InsideApp extends React.Component {
 
 		window.addEventListener("scroll", this.scrollListener);
 
+		// Listen for route changes
 		this.unlisten = this.props.history.listen(() => {
-			this.updateBackgroundAndLogo();
+			requestAnimationFrame(() => {
+				this.updateBackgroundAndLogo();
+			});
 		});
 	}
 
@@ -51,19 +80,13 @@ class InsideApp extends React.Component {
 
 	updateBackgroundAndLogo() {
 		const { pathname } = this.props.location;
-		let backgroundImage = "url('../img/cswl_2023_bg.jpg')";
-		let logoImage = "url('../img/CSWL_2025_SPRING_CSWL_16-9_copy.svg')";
+		const route = pathname.substring(1) || 'default';
+		const images = this.imageMap[route] || this.imageMap.default;
 
-		if (pathname === "/gala") {
-			backgroundImage = "url('../img/cswl_2023_bg_dark.png')";
-			logoImage = "url('../img/CSWL_Socials_GALA_2024LOGO.png')";
-		} else if (pathname === "/spring") {
-			logoImage = "url('../img/CSWL_2024_Spring_website.png')";
-		} else if (pathname === "/autumn") {
-			logoImage = "url('../img/CSWL_2024_Autumn-website.png')";
-		}
-
-		this.setState({ backgroundImage, logoImage });
+		this.setState({
+			backgroundImage: `url('${images.background}')`,
+			logoImage: `url('${images.logo}')`
+		});
 	}
 
 	getLHC() {
@@ -120,11 +143,12 @@ class InsideApp extends React.Component {
 					</Switch>
 				</div>
 
-				<div id="bg" className="bg fixed" style={{ backgroundImage: logoImage, opacity: bgOpacity, transform: "none" }} />
-				<link rel="preload" as="image" href="/img/CSWL_2024.png"/>
-				<link rel="preload" as="image" href="/img/CSWL_2024_Spring_website.png"/>
-				<link rel="preload" as="image" href="/img/CSWL_2024_Autumn-website.png"/>
-				<link rel="preload" as="image" href="/img/CSWL_Socials_GALA_2024LOGO.png"/>
+				<div id="bg" className="bg fixed" style={{
+					backgroundImage: logoImage,
+					opacity: bgOpacity,
+					transform: "none",
+					transition: "background-image 0.3s ease-in-out"
+				}} />
 				<Footer/>
 			</div>
 		);

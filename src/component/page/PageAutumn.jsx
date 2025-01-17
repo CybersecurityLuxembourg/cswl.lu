@@ -1,12 +1,11 @@
 import React from "react";
 import "./PageAutumn.css";
-import { Link } from "react-router-dom";
 import Loading from "../box/Loading.jsx";
 import Message from "../box/Message.jsx";
 import BoxAddYourEvent from "../box/BoxAddYourEvent.jsx";
 import { getRequest } from "../../utils/request.jsx";
 import { dictToURI } from "../../utils/url.jsx";
-import { getPrivateAppURL } from "../../utils/env.jsx";
+
 import Event from "../item/Event.jsx";
 
 export default class PageAutumn extends React.Component {
@@ -15,7 +14,7 @@ export default class PageAutumn extends React.Component {
 
 		this.state = {
 			events: null,
-			coreEventTitle: "HACK.LU 2024",
+			coreEventTitle: "HACK.LU 2025",
 		};
 	}
 
@@ -37,7 +36,7 @@ export default class PageAutumn extends React.Component {
 		if (this.props.lhc && this.props.analytics) {
 			const tv = this.props.analytics.taxonomy_values
 				.filter((v) => v.category === "EVENT CATEGORY")
-				.filter((v) => v.name === "CSWL 2024 - AUTUMN EDITION");
+				.filter((v) => v.name === "CSWL 2025 - AUTUMN EDITION");
 
 			if (tv.length > 0) {
 				const params = {
