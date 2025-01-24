@@ -292,23 +292,18 @@ const PageGala = ({ lhc, analytics }) => {
 
             <div>
                 <h2>SAVE THE DATE!</h2>
-                <p>The Gala & Awards Night will take place on 24 October 2024 at Parc Hotel Alvisse as of 7PM!</p>
-                <b>5 categories will be rewarded (click on a category to know more!):</b>
-                <GalaCategories openModal={openModal}/>
+                <p>The Gala & Awards Night will take place on 23 October 2025 at Parc Hotel Alvisse!</p>
             </div>
 
             <h2>BECOME A PARTNER!</h2>
             <p>Enhance your visibility within the cybersecurity community by partnering with us! Reach out to <a
                 href="mailto:info@lhc.lu">info(at)lhc(dot)lu</a>!</p>
 
-            <Suspense fallback={<div>Loading sponsoring packages...</div>}>
-                <SponsoringPackages onLoad={() => setSponsoringPackagesLoaded(true)}/>
-            </Suspense>
 
-            <h2>CSWL 2023 album & video</h2>
+            <h2>CSWL 2024 album & video</h2>
             <div className="responsive-iframe-container">
                 <iframe
-                    src="https://www.youtube.com/embed/lACE1EQRc_s?si=xIV5M166DOPKd0OJ"
+                    src="https://www.youtube.com/embed/uxPLxkA4rfk?si=SpwxJJ90IDL93Wod"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -316,7 +311,6 @@ const PageGala = ({ lhc, analytics }) => {
                     allowFullScreen
                 />
             </div>
-
             <Carousel
                 dynamicHeight={false}
                 showStatus={false}
@@ -325,11 +319,10 @@ const PageGala = ({ lhc, analytics }) => {
                 autoPlay={true}
                 interval={5000}
             >
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((num) => (
-                    <LazyLoadImage
-                        key={num}
-                        src={`/img/CSWL_2023_pict-${num}.jpg`}
-                        alt={`CSWL 2023 picture ${num}`}
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ,16].map((num) => (
+                    <LazyLoadImage                        key={num}
+                        src={`/img/album/BLA_${num}.jpg`}
+                        alt={`CSWL 2024 picture ${num}`}
                         effect="blur"
                     />
                 ))}
@@ -349,12 +342,31 @@ const PageGala = ({ lhc, analytics }) => {
                     </thead>
                     <tbody>
                     <tr>
-                        <td><b>2023</b></td>
+                        <td><b>2024</b></td>
                         <td>
                             <div>
-                                <LazyLoadImage className="profile" src="/img/franck_bedell_award.png"
-                                               alt="franck bedell award" effect="blur"/>
+                                <LazyLoadImage className="profile" src="/img/1677170558464.png"
+                                               alt=" Luc Cottin award" effect="blur"/>
                             </div>
+                           Luc Cottin
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/luccottin/"><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                        </td>
+                        <td>
+                            <div>
+                                <LazyLoadImage className="profile" src="/img/BLA_6858.jpg"
+                                               alt="julien winkin award" effect="blur"/>
+                            </div>
+                            Claudio Orlando Miele
+                            <a className="linkedin-link" href="https://www.linkedin.com/in/claudio-orlando-miele-439461138/, "><i
+                                className="fa fa-linkedin"/></a>
+                            <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>2023</b></td>
+                        <td>
                             Franck Bedell
                             <a className="linkedin-link" href="https://www.linkedin.com/in/franckbedell/"><i
                                 className="fa fa-linkedin"/></a>
@@ -365,10 +377,6 @@ const PageGala = ({ lhc, analytics }) => {
                             </a>
                         </td>
                         <td>
-                            <div>
-                                <LazyLoadImage className="profile" src="/img/julien_winkin_award.png"
-                                               alt="julien winkin award" effect="blur"/>
-                            </div>
                             Julien Winkin
                             <a className="linkedin-link" href="https://www.linkedin.com/in/julienwinkin/"><i
                                 className="fa fa-linkedin"/></a>
