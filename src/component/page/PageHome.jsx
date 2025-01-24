@@ -26,7 +26,7 @@ export default class PageHome extends React.Component {
             <div id={"main"} className={"PageHome light-fade-in-effect"}>
                 <div className={"description"}>
                     <p>
-                        The CYBERSECURITY Week Luxembourg 2024, the national campaign
+                        The CYBERSECURITY Week Luxembourg 2025, the national campaign
                         coordinated by the <a
                         href="https://www.lhc.lu"
                         target="_blank"
@@ -48,7 +48,6 @@ export default class PageHome extends React.Component {
                     <div className={"edition"}>
                         <h3>Spring edition<br/>in June 2025</h3>
                         <p>Explore the various events organized within the CSWL SPRING here!</p>
-                        <p>Core event:</p>
                         <a
                             href="/spring"
                             rel="noreferrer"
