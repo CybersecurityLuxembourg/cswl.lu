@@ -42,53 +42,62 @@ export default class PageHome extends React.Component {
                         The CSWL is divided into 2 key sessions.
                     </p>
                 </div>
-
-                <div className={"editions-small"}>
-                    <div className={"edition-white"}/>
-                    <div className={"edition"}>
+                <div className="editions-small">
+                    <div className="edition">
                         <h3>Spring edition<br/>in June 2025</h3>
-                        <p>Explore the various events organized within the CSWL SPRING here!</p>
-                        <a
-                            href="/spring"
-                            rel="noreferrer"
-                            target="_blank">
-                            <img
-                                src={"/img/CSWL_2025_SPRING_LINKEDIN_COMPANY_BANNER.svg"}
-                                alt="CSWL 2025 Spring light"
-                            />
+                        <p>Core event:</p>
+
+                        <a href="/spring"
+                           rel="noreferrer"
+                           target="_blank">
+                            <b>Luxembourg GRC Conference</b><br/>5 June 2025
+                            <div className="image-container">
+                                <img
+                                    src="/img/CSWL_2025_SPRING_LINKEDIN_COMPANY_BANNER.svg"
+                                    alt="CSWL 2025 Spring light"
+                                />
+                            </div>
                         </a>
                     </div>
-                    <div className={"edition"}>
+                    <div className="edition">
                         <h3>Autumn edition<br/>in October 2025</h3>
                         <p>Core event:</p>
-                        <a
-                            href="https://hack.lu/"
-                            rel="noreferrer"
-                            target="_blank">
 
-                            <b>hack.lu<br/>
-                                21 - 24 October 2025<br/>Parc Hotel Alvisse, Luxembourg<br/></b>
-                            <img
-                                src={"/img/hacklu2024.png"}
-                                alt="CSWL 2024 Hack.lu"
-                            />
+                        <a href="https://hack.lu/"
+                           rel="noreferrer"
+                           target="_blank">
+                            <b>hack.lu</b><br/>
+                           21 - 24 October 2025<br/>
+                           Parc Hotel Alvisse, Luxembourg
+                            <div className="image-container">
+                                <img
+                                    src="/img/hacklu2024.png"
+                                    alt="CSWL 2024 Hack.lu"
+                                />
+                            </div>
                         </a>
                     </div>
-                    <div className={"edition"}>
+                    <div className="edition">
                         <h3>SPECIAL EDITION 2025</h3>
                         <p>Core event:</p>
-                        <a
-                            href="#"
-                            rel="noreferrer"
-                            target="_blank">
 
-                            <b>CSWL @Expo Osaka 2025<br/>
-                                28 August - 03 September 2025</b>
+                        <a href="#"
+                           rel="noreferrer"
+                           target="_blank">
+                            <b>CSWL @Expo Osaka 2025</b><br/>
+                            28 August - 03 September 2025
+                            <div className="image-container">
+                                <img
+                                    src="/img/pavilion.jpg"
+                                    alt="OSAKA"
+                                />
+                            </div>
                         </a>
                     </div>
-                    <div className={"edition-white"}/>
                 </div>
+
                 <div className={"description"}>
+
                     <p>
                         In addition, a series of events will be organised addressing different
                         types of topics, targeting a wide range of audiences.
@@ -102,7 +111,7 @@ export default class PageHome extends React.Component {
                     </p>
                 </div>
                 <div className={"editions-small"}>
-                    <div className={"edition-white"}/>
+                  
                     <div className={"edition"}>
                         <a
                             href="/spring"
@@ -116,7 +125,7 @@ export default class PageHome extends React.Component {
                         </a>
                     </div>
                     <div className={"edition"}>
-                    <a
+                        <a
                             href="/autumn"
                             rel="noreferrer"
                             target="_blank">
@@ -126,20 +135,14 @@ export default class PageHome extends React.Component {
                             />
                         </a>
                     </div>
-                    <div className={"edition-white"}/>
+                    
                 </div>
 
                 <div className={"editions"}>
-                    <div className={"edition"}/>
-
                     <BoxAddYourEvent/>
-
-                    <div className={"edition"}/>
                 </div>
 
                 <div className={"editions"}>
-                    <div className={"edition"}/>
-
                     <div className={"brand-kit"}>
                         <a
                             href={"https://cloudshare.secin.lu/index.php/s/gwY9iYHBWa8ETZ7"}
@@ -150,8 +153,6 @@ export default class PageHome extends React.Component {
                             <h4>Download the brand kit</h4>
                         </a>
                     </div>
-
-                    <div className={"edition"}/>
                 </div>
             </div>
         );
