@@ -62,7 +62,7 @@ export default class PageAutumn extends React.Component {
 		const content = [];
 
 		this.state.events.items
-			.filter((e) => e.title.toUpperCase() !== this.state.coreEventTitle)
+			.filter((e) => e.title.toUpperCase())
 			.map((e) => {
 			content.push(
 				<Event
