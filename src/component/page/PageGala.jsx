@@ -292,7 +292,7 @@ const PageGala = ({ lhc, analytics }) => {
 
             <div>
                 <h2>SAVE THE DATE!</h2>
-                <p>The Gala & Awards Night will take place on 23 October 2025 at Parc Hotel Alvisse!</p>
+                <p>The Gala & Awards Night will take place on 22 October 2025 at Parc Hotel Alvisse!</p>
             </div>
 
             <h2>BECOME A PARTNER!</h2>
