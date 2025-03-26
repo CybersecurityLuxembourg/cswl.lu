@@ -26,7 +26,7 @@ class InsideApp extends React.Component {
 			},
 			gala: {
 				background: "/img/cswl_2023_bg_dark.png",
-				logo: "/img/CSWL_Socials_GALA_2025LOGO.svg"
+				logo: "/img/GALA_Awards_Night_Fixe_1920x1080.jpg"
 			},
 			spring: {
 				background: "/img/cswl_2023_bg.jpg",
